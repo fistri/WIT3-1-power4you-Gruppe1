@@ -24,8 +24,3 @@ dist-ssr
 *.sw?
 
 /node_module 
-/src/generated/prisma
-
-/prisma/src/generated/prisma
-
-/generated/prisma

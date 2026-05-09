@@ -1,6 +1,16 @@
 import express from 'express';
 import cors from 'cors';
 
+import "dotenv/config";
+import { PrismaMariaDb } from "@prisma/adapter-mariadb";
+import { PrismaClient } from "./generated/prisma/client";
+
+const adapter = new PrismaMariaDb({
+  connectionLimit: 5
+});
+const prisma = new PrismaClient({ adapter });
+console.log(prisma)
+
 const app = express();
 const PORT = 3000;
 
