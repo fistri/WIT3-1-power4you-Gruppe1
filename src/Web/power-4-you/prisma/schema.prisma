@@ -1,13 +1,69 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Get a free hosted Postgres database in seconds: `npx create-db`
-
 generator client {
   provider = "prisma-client"
-  output   = "../src/generated/prisma"
+  output   = "../generated/prisma"
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
+}
+
+model Kunde {
+  Kundennummer  Int          @id @default(autoincrement())
+  User_ID       Int          @unique(map: "User_ID")
+  Vorname       String       @db.VarChar(255)
+  Nachname      String       @db.VarChar(255)
+  Strasse       String       @db.VarChar(255)
+  Hausnummer    String       @db.VarChar(255)
+  Postleitzahl  String       @db.VarChar(255)
+  Ort           String       @db.VarChar(255)
+  Email         String       @db.VarChar(255)
+  Telefonnummer String       @db.VarChar(255)
+  User          User         @relation(fields: [User_ID], references: [User_ID], onUpdate: Restrict, map: "Kunde_ibfk_1")
+  Solarmodul    Solarmodul[]
+}
+
+model Leistung {
+  Timestamp   DateTime   @default(now()) @db.Timestamp(0)
+  Modulnummer Int
+  Power_Out   Int
+  Solarmodul  Solarmodul @relation(fields: [Modulnummer], references: [Modulnummer], onUpdate: Restrict, map: "Leistung_ibfk_1")
+
+  @@id([Timestamp, Modulnummer])
+  @@index([Modulnummer], map: "Modulnummer_FK")
+}
+
+model Solarmodul {
+  Modulnummer         Int           @id @default(autoincrement())
+  Solarmodultypnummer Int
+  Kundennummer        Int
+  Leistung            Leistung[]
+  Solarmodultyp       Solarmodultyp @relation(fields: [Solarmodultypnummer], references: [Solarmodultypnummer], onUpdate: Restrict, map: "Solarmodul_ibfk_2")
+  Kunde               Kunde         @relation(fields: [Kundennummer], references: [Kundennummer], onUpdate: Restrict, map: "Solarmodul_ibfk_3")
+
+  @@index([Kundennummer], map: "Kundennummer")
+  @@index([Solarmodultypnummer], map: "Solarmodultypnummer")
+}
+
+model Solarmodultyp {
+  Solarmodultypnummer Int          @id @default(autoincrement())
+  Bezeichnung         String       @db.VarChar(64)
+  Umpp                Float        @db.Float
+  Impp                Float        @db.Float
+  Pmpp                Float        @db.Float
+  Solarmodul          Solarmodul[]
+}
+
+model User {
+  User_ID  Int    @id @default(autoincrement())
+  Username String @db.VarChar(255)
+  Password String @db.VarChar(255)
+  Api_key  String @db.VarChar(255)
+  Kunde    Kunde?
+}
+
+model EFMigrationsHistory {
+  MigrationId    String @id @db.VarChar(150)
+  ProductVersion String @db.VarChar(32)
+
+  @@map("__EFMigrationsHistory")
 }
