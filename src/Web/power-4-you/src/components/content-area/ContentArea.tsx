@@ -11,8 +11,6 @@ const ContentArea = (
         setSelectedOverview: any 
     }
 ) => {
-    setSelectedOverview(selectedOverview)
-
     return (
         <div className="flex-row content-area border-radius">
             {selectedOverview}
