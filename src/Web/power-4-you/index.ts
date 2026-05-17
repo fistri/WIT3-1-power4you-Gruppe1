@@ -4,9 +4,17 @@ import cors from 'cors';
 import "dotenv/config";
 import { PrismaMariaDb } from "@prisma/adapter-mariadb";
 import { PrismaClient } from "./generated/prisma/client.js";
+import { env } from "prisma/config";
+
+const url = new URL(env("DATABASE_URL"));
 
 const adapter = new PrismaMariaDb({
-  connectionLimit: 5
+  host: url.hostname,
+  port: parseInt(url.port),
+  user: url.username,
+  password: url.password,
+  database: url.pathname.slice(1),
+  connectionLimit: 5,
 });
 const prisma = new PrismaClient({ adapter });
 
@@ -15,19 +23,30 @@ const PORT = 3000;
 
 // Middleware
 app.use(cors());
-app.use(express.json());
+//app.use(express.json());
 
 // API Routes
 app.get('/api/user', (req, res) => {
-    res.json({ user: "Admin" });
+    res.send({ user: "Admin" });
 });
 
-app.get('/api/data', (req, res) => {
-    res.json({ message: "Hello from Express Backend" });
-});
+app.get('/api/:module_id', async (req, res) => {
+    try {
+        const moduleId = Number(req.params.module_id);
+        if (Number.isNaN(moduleId)) {
+            return res.status(400).send({ error: 'Invalid module id' });
+        }
 
-app.get('/', (req, res) => {
-    res.json({ message: "Express API Server is running", user: "Admin" });
+        const rows = await prisma.leistung.findMany({
+            where: { Modulnummer: moduleId },
+            orderBy: { Timestamp: 'desc' },
+            take: 10
+        });
+        res.send(rows);
+    } catch (error) {
+        console.error('Database query failed:', error);
+        res.status(500).send({ error: 'Database request failed' });
+    }
 });
 
 // Start server
