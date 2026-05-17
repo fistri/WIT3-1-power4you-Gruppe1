@@ -7,6 +7,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100% !important;
+  height: 100vh !important;
 }
 
 .flex-column {
@@ -26,4 +27,37 @@ body {
 
 .space-between {
   justify-content: space-between;
+}
+
+.canvas {
+  padding: 10px;
+  height: 100vh;
+  width: 100%;
+}
+
+.border-radius {
+  border-radius: 5px;
+}
+
+.margin-right-small {
+  margin-right: 5px;
+}
+
+.margin-right-large {
+  margin-right: 10px;
+}
+
+.margin-bottom-small {
+  margin-bottom: 5px;
+}
+
+.margin-bottom-large {
+  margin-bottom: 10px;
+}
+
+.height-full {
+  height: 100%;
+}
+.width-full {
+  width: 100%;
 }

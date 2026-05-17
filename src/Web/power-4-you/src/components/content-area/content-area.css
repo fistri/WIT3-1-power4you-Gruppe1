@@ -1,0 +1,12 @@
+.login-alert {
+    background-color: #ffdddd;
+    border: 6px solid #f44336;
+    padding: 15px 20px;
+}
+
+.content-area {
+    padding: 10px;
+    background-color: #ececec;
+    height: calc(100vh - 110px); /* Adjusting for header and nav-bar height */
+    overflow-y: none;
+}

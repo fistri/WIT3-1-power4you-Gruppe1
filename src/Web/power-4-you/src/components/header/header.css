@@ -1,0 +1,25 @@
+.header {
+    height: 60px;
+    background-color: #c4c4c4;
+    padding: 10px;
+}
+
+.company-logo {
+    cursor: pointer;
+}
+
+.logo {
+    display: flex;
+    justify-self: flex-start;
+}
+
+.navigation {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.buttons {
+    width: 164.5px;
+    justify-content: flex-end;
+}
