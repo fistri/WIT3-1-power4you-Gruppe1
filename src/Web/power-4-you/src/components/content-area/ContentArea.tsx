@@ -12,7 +12,7 @@ const ContentArea = (
     }
 ) => {
     return (
-        <div className="flex-row content-area border-radius">
+        <div className="flex-row content-area margin-bottom-large border-radius">
             {selectedOverview}
         </div>
     )

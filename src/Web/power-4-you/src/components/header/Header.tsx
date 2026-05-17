@@ -1,26 +1,23 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { memo, useEffect, useState } from "react"
 import "./header.css"
-import { Tab, Tabs, Image, Button, IconButton, Modal, Input } from "rsuite"
-import { Ellipsis } from "lucide-react"
+import { Tab, Tabs, Image, Button, Modal, Input } from "rsuite"
 import login from "../../api/post/login"
 import logout from "../../api/post/logout"
 
 const Header = (
     {
-        selectedTab,
-        setSelectedTab,
+        selectedOverview, 
+        setSelectedOverview,
         loggedIn,
         setLoggedIn,
-        user,
         setUser
     }:
         {
-            selectedTab: string,
-            setSelectedTab: any,
+            selectedOverview: string,
+            setSelectedOverview: any,
             loggedIn: boolean,
             setLoggedIn: any,
-            user: string | null,
             setUser: any
         }
 ) => {
@@ -36,8 +33,10 @@ const Header = (
             const data = await login(username, password)
             console.log('Login response:', data)
             if (data.isLoggedIn) {
+                console.log('Login successful:', data)
                 setLoggedIn(true)
-                setUser(data.user.Username)
+                setUser(data.user.username)
+                setSelectedOverview("dashboard")
                 handleClose()
             }
             else {
@@ -83,15 +82,15 @@ const Header = (
 
     const handleImageOnClick = () => {
         if (loggedIn) {
-            setSelectedTab("content")
+            setSelectedOverview("dashboard")
         }
     }
 
     useEffect(() => {
         if (!loggedIn) {
-            setSelectedTab("")
+            setSelectedOverview("")
         }
-    }, [loggedIn, setSelectedTab])
+    }, [loggedIn, setSelectedOverview])
 
     //TODO: If the user selects the Contact or Imprint tab and leaves it then the selected tab should automatically switch back to Content after login or to nothing if he is not logged
 
@@ -99,15 +98,14 @@ const Header = (
         <div className="flex-row header border-radius margin-bottom-large">
             <Image src="../../../public/Power4YouLogo.png" alt="Power 4 You logo" height={40} className={loggedIn ? "company-logo logo" : "logo"} onClick={handleImageOnClick} />
             <div className="navigation">
-                <Tabs activeKey={selectedTab} onSelect={setSelectedTab} appearance="subtle">
-                    <Tab title="Content" eventKey="content" disabled={!loggedIn} />
-                    <Tab title="Contact" eventKey="contact" />
-                    <Tab title="Imprint" eventKey="imprint" />
+                <Tabs activeKey={selectedOverview} onSelect={setSelectedOverview} appearance="subtle">
+                    <Tab title="Dashboard" eventKey="dashboard" disabled={!loggedIn} />
+                    <Tab title="Storage" eventKey="storage" disabled={!loggedIn} />
+                    <Tab title="Solar" eventKey="solar" disabled={!loggedIn} />
                 </Tabs>
             </div>
             <div className="flex-row buttons">
                 {renderLoginButton()}
-                <IconButton appearance="subtle" icon={<Ellipsis />} disabled={!loggedIn} />
             </div>
             <Modal open={open} onClose={handleClose}>
                 <Modal.Header>
