@@ -11,6 +11,8 @@ import { env } from "prisma/config";
 
 const url = new URL(env("DATABASE_URL"));
 
+//TODO: Was haben Sie sich unter API-Keys als Absicherung vorgestellt?
+
 const adapter = new PrismaMariaDb({
   host: url.hostname,
   port: parseInt(url.port),

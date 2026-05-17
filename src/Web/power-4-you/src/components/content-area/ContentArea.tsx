@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import "./content-area.css"
 
 const ContentArea = (
@@ -8,7 +7,7 @@ const ContentArea = (
     }: 
     { 
         selectedOverview: string, 
-        setSelectedOverview: any 
+        setSelectedOverview: unknown 
     }
 ) => {
     return (
