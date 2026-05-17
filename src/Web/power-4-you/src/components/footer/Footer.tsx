@@ -8,7 +8,7 @@ const Footer = () => {
     const handleOpen = () => setOpen(true)
     const handleClose = () => setOpen(false)
 
-    //TODO: E-Mail Anbindung einbauen
+    //TODO: Wie soll die E-Mail Anbindung gebaut sein?
     //TODO: Müssen wir ein Impressum erstellen?
 
     return (
