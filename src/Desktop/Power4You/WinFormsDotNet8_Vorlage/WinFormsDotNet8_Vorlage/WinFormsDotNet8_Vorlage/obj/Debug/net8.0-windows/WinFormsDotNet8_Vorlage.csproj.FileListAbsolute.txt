@@ -1,0 +1,203 @@
+C:\Users\simon\source\repos\2025_VorbereitungUnterricht\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.exe
+C:\Users\simon\source\repos\2025_VorbereitungUnterricht\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.dll.config
+C:\Users\simon\source\repos\2025_VorbereitungUnterricht\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.deps.json
+C:\Users\simon\source\repos\2025_VorbereitungUnterricht\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.runtimeconfig.json
+C:\Users\simon\source\repos\2025_VorbereitungUnterricht\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.dll
+C:\Users\simon\source\repos\2025_VorbereitungUnterricht\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.pdb
+C:\Users\simon\source\repos\2025_VorbereitungUnterricht\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.Form1.resources
+C:\Users\simon\source\repos\2025_VorbereitungUnterricht\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.Properties.Resources.resources
+C:\Users\simon\source\repos\2025_VorbereitungUnterricht\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.csproj.GenerateResource.cache
+C:\Users\simon\source\repos\2025_VorbereitungUnterricht\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\simon\source\repos\2025_VorbereitungUnterricht\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.AssemblyInfoInputs.cache
+C:\Users\simon\source\repos\2025_VorbereitungUnterricht\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.AssemblyInfo.cs
+C:\Users\simon\source\repos\2025_VorbereitungUnterricht\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.csproj.CoreCompileInputs.cache
+C:\Users\simon\source\repos\2025_VorbereitungUnterricht\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.dll
+C:\Users\simon\source\repos\2025_VorbereitungUnterricht\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\refint\WinFormsDotNet8_Vorlage.dll
+C:\Users\simon\source\repos\2025_VorbereitungUnterricht\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.pdb
+C:\Users\simon\source\repos\2025_VorbereitungUnterricht\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.genruntimeconfig.cache
+C:\Users\simon\source\repos\2025_VorbereitungUnterricht\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\ref\WinFormsDotNet8_Vorlage.dll
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.exe
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.dll.config
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.deps.json
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.runtimeconfig.json
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.dll
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.pdb
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WeifenLuo.WinFormsUI.Docking.dll
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WeifenLuo.WinFormsUI.Docking.ThemeVS2015.dll
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.csproj.AssemblyReference.cache
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.Properties.Resources.resources
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.csproj.GenerateResource.cache
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.GeneratedMSBuildEditorConfig.editorconfig
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.AssemblyInfoInputs.cache
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.AssemblyInfo.cs
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.csproj.CoreCompileInputs.cache
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinForms.7422CC9B.Up2Date
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.dll
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\refint\WinFormsDotNet8_Vorlage.dll
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.pdb
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.genruntimeconfig.cache
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\ref\WinFormsDotNet8_Vorlage.dll
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.CompanyDetailView.resources
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.CustomerDetailView.resources
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.InverterDetailView.resources
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.LogIn.resources
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.Logo.resources
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.MainForm.resources
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.SideBar.resources
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.SolarDetailView.resources
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.TableCustomer.resources
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.TableInverter.resources
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.TableSolar.resources
+H:\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.TableCompany.resources
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.exe
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.dll.config
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.deps.json
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.runtimeconfig.json
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.pdb
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WeifenLuo.WinFormsUI.Docking.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WeifenLuo.WinFormsUI.Docking.ThemeVS2015.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.csproj.AssemblyReference.cache
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.CustomerDetailView.resources
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.LogIn.resources
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.Logo.resources
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.MainForm.resources
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.Properties.Resources.resources
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.SideBar.resources
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.TableCustomer.resources
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.csproj.GenerateResource.cache
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.GeneratedMSBuildEditorConfig.editorconfig
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.AssemblyInfoInputs.cache
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.AssemblyInfo.cs
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.csproj.CoreCompileInputs.cache
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinForms.7422CC9B.Up2Date
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\refint\WinFormsDotNet8_Vorlage.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.pdb
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.genruntimeconfig.cache
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\ref\WinFormsDotNet8_Vorlage.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Binder.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.CommandLine.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.UserSecrets.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Diagnostics.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Diagnostics.Abstractions.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Hosting.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Hosting.Abstractions.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Configuration.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Console.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Debug.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.EventLog.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.EventSource.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\System.Diagnostics.DiagnosticSource.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\System.Text.Json.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Google.Protobuf.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\MySql.Data.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\ZstdSharp.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.SolarTypeDetailView.resources
+H:\dev\Projekt frfr\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.TableSolarType.resources
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.csproj.AssemblyReference.cache
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.CustomerDetailView.resources
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.LogIn.resources
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.MainForm.resources
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.Properties.Resources.resources
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.SideBar.resources
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.SolarTypeDetailView.resources
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.TableCustomer.resources
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.TableSolarType.resources
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.csproj.GenerateResource.cache
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.GeneratedMSBuildEditorConfig.editorconfig
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.AssemblyInfoInputs.cache
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.AssemblyInfo.cs
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.csproj.CoreCompileInputs.cache
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.sourcelink.json
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\refint\WinFormsDotNet8_Vorlage.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.pdb
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.exe
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.dll.config
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.deps.json
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.runtimeconfig.json
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.pdb
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WeifenLuo.WinFormsUI.Docking.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\WeifenLuo.WinFormsUI.Docking.ThemeVS2015.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Google.Protobuf.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Binder.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.CommandLine.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.UserSecrets.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Diagnostics.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Diagnostics.Abstractions.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Hosting.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Hosting.Abstractions.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Configuration.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Console.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Debug.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.EventLog.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.EventSource.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\MySql.Data.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\System.Diagnostics.DiagnosticSource.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\System.Text.Json.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\ZstdSharp.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinForms.7422CC9B.Up2Date
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.genruntimeconfig.cache
+E:\Visual Studio Projekte\repos\src\Desktop\Power4You\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\ref\WinFormsDotNet8_Vorlage.dll
