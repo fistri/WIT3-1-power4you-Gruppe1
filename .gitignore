@@ -3,4 +3,6 @@
 ################################################################################
 
 /.vs
-/src/Desktop/Power4You/WinFormsDotNet8_Vorlage/WinFormsDotNet8_Vorlage/.vs/WinFormsDotNet8_Vorlage
+/src/Desktop/Power4You/WinFormsDotNet8_Vorlage/WinFormsDotNet8_Vorlage/.vs
+/src/Desktop/Power4You/WinFormsDotNet8_Vorlage/WinFormsDotNet8_Vorlage/WinFormsDotNet8_Vorlage/obj/Debug/net8.0-windows/WinFormsDotNet8_Vorlage.AssemblyInfo.cs
+/src/Desktop/Power4You/WinFormsDotNet8_Vorlage/WinFormsDotNet8_Vorlage/WinFormsDotNet8_Vorlage/obj/Debug/net8.0-windows/WinFormsDotNet8_Vorlage.AssemblyInfoInputs.cache
