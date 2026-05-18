@@ -52,6 +52,29 @@ app.get('/api/user', (req, res) => {
     res.send({ user: "Admin" });
 });
 
+app.get('/api/user/:id', async (req, res) => {
+    try {
+        const userId = Number(req.params.id);
+        if (Number.isNaN(userId)) {
+            return res.status(400).send({ error: 'Invalid user id' });
+        }
+
+        const user = await prisma.user.findUnique({
+            where: { User_ID: userId },
+            select: { User_ID: true, Username: true, Api_key: true }
+        });
+
+        if (!user) {
+            return res.status(404).send({ error: 'User not found' });
+        }
+
+        res.send(user);
+    } catch (error) {
+        console.error('Database query failed:', error);
+        res.status(500).send({ error: 'Database request failed' });
+    }
+});
+
 app.get('/api/session', (req, res) => {
     const sess = req.session;
     res.send({ user: sess?.user ?? null });
