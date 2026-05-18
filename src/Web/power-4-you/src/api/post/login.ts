@@ -1,5 +1,5 @@
 
-const login = async (username: string, password: string) => {
+const login = async (username: string, password: string, api_key: string) => {
     try {
         const response = await fetch('http://localhost:3000/api/login', {
             method: 'POST',
@@ -9,7 +9,8 @@ const login = async (username: string, password: string) => {
             },
             body: JSON.stringify({
                 username: username,
-                password: password
+                password: password,
+                api_key: api_key
             })
         });
         if (!response.ok) {

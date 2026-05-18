@@ -9,6 +9,12 @@ import { PrismaMariaDb } from "@prisma/adapter-mariadb";
 import { PrismaClient } from "./generated/prisma/client.js";
 import { env } from "prisma/config";
 
+// Import route creators
+import { createTypesRouter } from "./src/routes/types.js";
+import { createModulesRouter } from "./src/routes/modules.js";
+import { createCustomersRouter } from "./src/routes/customers.js";
+import { createPerformanceRouter } from "./src/routes/performance.js";
+
 const url = new URL(env("DATABASE_URL"));
 
 //TODO: Was haben Sie sich unter API-Keys als Absicherung vorgestellt?
@@ -80,34 +86,21 @@ app.get('/api/session', (req, res) => {
     res.send({ user: sess?.user ?? null });
 });
 
-app.get('/api/module/:module_id', async (req, res) => {
-    try {
-        const moduleId = Number(req.params.module_id);
-        if (Number.isNaN(moduleId)) {
-            return res.status(400).send({ error: 'Invalid module id' });
-        }
-
-        const rows = await prisma.leistung.findMany({
-            where: { Modulnummer: moduleId },
-            orderBy: { Timestamp: 'desc' },
-            take: 10
-        });
-        res.send(rows);
-    } catch (error) {
-        console.error('Database query failed:', error);
-        res.status(500).send({ error: 'Database request failed' });
-    }
-});
-
 app.post('/api/login', async (req, res) => {
-    const { username, password } = req.body;
-    if (!username || !password) return res.status(400).send({ error: 'Missing credentials' });
+    const { username, password, api_key } = req.body;
+    if (!username || !password || !api_key) {
+        return res.status(400).send({ error: 'Missing credentials: username, password, and api_key required' });
+    }
 
     try {
         const user = await prisma.user.findFirst({ where: { Username: username } });
         if (!user) return res.status(401).send({ error: 'Invalid credentials' });
 
+        // Validate password
         if (user.Password !== password) return res.status(401).send({ error: 'Invalid credentials' });
+
+        // Validate api_key
+        if (user.Api_key !== api_key) return res.status(401).send({ error: 'Invalid credentials' });
 
         req.session.user = { id: user.User_ID, username: user.Username };
         req.session.save((err) => {
@@ -134,6 +127,12 @@ app.post('/api/logout', (req, res) => {
         }
     });
 });
+
+// Register modular CRUD routers
+app.use(createTypesRouter(prisma));
+app.use(createModulesRouter(prisma));
+app.use(createCustomersRouter(prisma));
+app.use(createPerformanceRouter(prisma));
 
 // Start server
 app.listen(PORT, () => {
