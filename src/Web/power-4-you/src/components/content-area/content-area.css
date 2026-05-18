@@ -10,3 +10,9 @@
     height: calc(100vh - 110px); /* Adjusting for header and nav-bar height */
     overflow-y: none;
 }
+
+.content-area .ag-theme-quartz,
+.content-area .ag-root-wrapper {
+    height: 100%;
+    width: 100%;
+}
