@@ -35,7 +35,7 @@ const Header = (
             if (data.isLoggedIn) {
                 console.log('Login successful:', data)
                 setLoggedIn(true)
-                setUser(data.user.username)
+                setUser(data.user)
                 setSelectedOverview("solar")
                 handleClose()
             }
@@ -91,8 +91,6 @@ const Header = (
             setSelectedOverview("")
         }
     }, [loggedIn, setSelectedOverview])
-
-    //TODO: If the user selects the Contact or Imprint tab and leaves it then the selected tab should automatically switch back to Content after login or to nothing if he is not logged
 
     return (
         <div className="flex-row header border-radius margin-bottom-large">

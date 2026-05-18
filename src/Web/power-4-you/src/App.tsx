@@ -9,7 +9,7 @@ import { AgGridProvider } from 'ag-grid-react';
 const modules = [AllCommunityModule];
 
 const App = () => {
-  const [user, setUser] = useState<string | null>(null)
+  const [user, setUser] = useState<null>(null)
   const [loggedIn, setLoggedIn] = useState(false)
   const [selectedOverview, setSelectedOverview] = useState<"solar" | "profile">("solar")
 
