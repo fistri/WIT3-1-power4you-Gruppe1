@@ -8,12 +8,9 @@ const Footer = () => {
     const handleOpen = () => setOpen(true)
     const handleClose = () => setOpen(false)
 
-    //TODO: Wie soll die E-Mail Anbindung gebaut sein?
-    //TODO: Müssen wir ein Impressum erstellen?
-
     return (
         <div className="flex-row border-radius centered footer">
-            <Button appearance="subtle" className="margin-right-small" href="imprint">
+            <Button appearance="subtle" className="margin-right-small">
                 Imprint
             </Button>
             <Button appearance="subtle" onClick={handleOpen}>

@@ -14,7 +14,7 @@ const Header = (
         setUser
     }:
         {
-            selectedOverview: string,
+            selectedOverview: "solar" | "profile",
             setSelectedOverview: any,
             loggedIn: boolean,
             setLoggedIn: any,
@@ -36,7 +36,7 @@ const Header = (
                 console.log('Login successful:', data)
                 setLoggedIn(true)
                 setUser(data.user.username)
-                setSelectedOverview("dashboard")
+                setSelectedOverview("solar")
                 handleClose()
             }
             else {
@@ -82,7 +82,7 @@ const Header = (
 
     const handleImageOnClick = () => {
         if (loggedIn) {
-            setSelectedOverview("dashboard")
+            setSelectedOverview("solar")
         }
     }
 
@@ -99,9 +99,8 @@ const Header = (
             <Image src="../../../public/Power4YouLogo.png" alt="Power 4 You logo" height={40} className={loggedIn ? "company-logo logo" : "logo"} onClick={handleImageOnClick} />
             <div className="navigation">
                 <Tabs activeKey={selectedOverview} onSelect={setSelectedOverview} appearance="subtle">
-                    <Tab title="Dashboard" eventKey="dashboard" disabled={!loggedIn} />
-                    <Tab title="Storage" eventKey="storage" disabled={!loggedIn} />
                     <Tab title="Solar" eventKey="solar" disabled={!loggedIn} />
+                    <Tab title="Profile" eventKey="profile" disabled={!loggedIn} />
                 </Tabs>
             </div>
             <div className="flex-row buttons">

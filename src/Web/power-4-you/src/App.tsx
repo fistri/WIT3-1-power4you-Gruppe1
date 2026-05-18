@@ -7,7 +7,7 @@ import Footer from "./components/footer/Footer"
 const App = () => {
   const [user, setUser] = useState<string | null>(null)
   const [loggedIn, setLoggedIn] = useState(false)
-  const [selectedOverview, setSelectedOverview] = useState("dashboard")
+  const [selectedOverview, setSelectedOverview] = useState<"solar" | "profile">("solar")
 
   return (
     <div className="canvas flex-column">
