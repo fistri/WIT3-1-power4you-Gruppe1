@@ -105,10 +105,10 @@ const Header = (
             </Modal>
             <Drawer open={drawerOpen} onClose={() => setDrawerOpen(false)}>
                 <Drawer.Header>
-                    <Drawer.Title>{customerData.Nachname}, {customerData.Vorname} - {customerData.Kundennummer}</Drawer.Title>
+                    <Drawer.Title>{customerData.Nachname}, {customerData.Vorname} - {customerData.Kundennummer}</Drawer.Title> {/*TODO: Replace with actual customer data */}
                 </Drawer.Header>
                 <Drawer.Body>
-                    <ProfileOverview customer={customerData} />
+                    <ProfileOverview customer={customerData} /> {/*TODO: Replace with actual customer data */}
                 </Drawer.Body>
             </Drawer>
         </div>
