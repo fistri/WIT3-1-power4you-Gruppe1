@@ -41,3 +41,15 @@ export const powerOutput = [
   { Timestamp: new Date("2026-05-18T20:00:00"), Modulnummer: 2, Power_out: 6 },
   { Timestamp: new Date("2026-05-18T21:00:00"), Modulnummer: 2, Power_out: 0 },
 ];
+
+export const customerData = {
+  Kundennummer: 123456,
+  Vorname: "Max",
+  Nachname: "Mustermann",
+  Strasse: "Musterstraße",
+  Hausnummer: "1",
+  Postleitzahl: "12345",
+  Ort: "Musterstadt",
+  Email: "max.mustermann@example.com",
+  Telefonnummer: "+49 123 4567890"
+};

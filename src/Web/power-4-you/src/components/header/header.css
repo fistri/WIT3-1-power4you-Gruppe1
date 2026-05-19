@@ -1,22 +1,12 @@
 .header {
     height: 60px;
     background-color: #c4c4c4;
+    width: 100% !important;
     padding: 10px;
-}
-
-.company-logo {
-    cursor: pointer;
-}
-
-.logo {
     display: flex;
-    justify-self: flex-start;
-}
-
-.navigation {
-    display: flex;
-    flex: 1;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .buttons {
