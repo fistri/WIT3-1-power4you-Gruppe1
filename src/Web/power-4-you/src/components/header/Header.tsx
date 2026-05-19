@@ -1,27 +1,27 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { memo, useEffect, useState } from "react"
+import { memo, useState } from "react"
 import "./header.css"
-import { Tab, Tabs, Image, Button, Modal, Input } from "rsuite"
+import { Image, Button, Modal, Input, IconButton, Drawer } from "rsuite"
 import login from "../../api/post/login"
 import logout from "../../api/post/logout"
+import { User } from "lucide-react"
+import { customerData } from "../../helper/testData"
+import ProfileOverview from "./ProfileOverview"
 
 const Header = (
     {
-        selectedOverview, 
-        setSelectedOverview,
         loggedIn,
         setLoggedIn,
         setUser
     }:
         {
-            selectedOverview: "solar" | "profile",
-            setSelectedOverview: any,
             loggedIn: boolean,
             setLoggedIn: any,
             setUser: any
         }
 ) => {
     const [open, setOpen] = useState(false)
+    const [drawerOpen, setDrawerOpen] = useState(false)
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
 
@@ -36,7 +36,6 @@ const Header = (
                 console.log('Login successful:', data)
                 setLoggedIn(true)
                 setUser(data.user)
-                setSelectedOverview("solar")
                 handleClose()
             }
             else {
@@ -80,29 +79,12 @@ const Header = (
         }
     }
 
-    const handleImageOnClick = () => {
-        if (loggedIn) {
-            setSelectedOverview("solar")
-        }
-    }
-
-    useEffect(() => {
-        if (!loggedIn) {
-            setSelectedOverview("")
-        }
-    }, [loggedIn, setSelectedOverview])
-
     return (
         <div className="flex-row header border-radius margin-bottom-large">
-            <Image src="../../../public/Power4YouLogo.png" alt="Power 4 You logo" height={40} className={loggedIn ? "company-logo logo" : "logo"} onClick={handleImageOnClick} />
-            <div className="navigation">
-                <Tabs activeKey={selectedOverview} onSelect={setSelectedOverview} appearance="subtle">
-                    <Tab title="Solar" eventKey="solar" disabled={!loggedIn} />
-                    <Tab title="Profile" eventKey="profile" disabled={!loggedIn} />
-                </Tabs>
-            </div>
+            <Image src="../../../public/Power4YouLogo.png" alt="Power 4 You logo" height={40} />
             <div className="flex-row buttons">
                 {renderLoginButton()}
+                <IconButton icon={<User />} appearance="subtle" onClick={() => setDrawerOpen(true)} disabled={!loggedIn} />
             </div>
             <Modal open={open} onClose={handleClose}>
                 <Modal.Header>
@@ -121,6 +103,14 @@ const Header = (
                     </Button>
                 </Modal.Footer>
             </Modal>
+            <Drawer open={drawerOpen} onClose={() => setDrawerOpen(false)}>
+                <Drawer.Header>
+                    <Drawer.Title>{customerData.Nachname}, {customerData.Vorname} - {customerData.Kundennummer}</Drawer.Title> {/*TODO: Replace with actual customer data */}
+                </Drawer.Header>
+                <Drawer.Body>
+                    <ProfileOverview customer={customerData} /> {/*TODO: Replace with actual customer data */}
+                </Drawer.Body>
+            </Drawer>
         </div>
     )
 }
