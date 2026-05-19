@@ -8,6 +8,7 @@ import "dotenv/config";
 import { PrismaMariaDb } from "@prisma/adapter-mariadb";
 import { PrismaClient } from "./generated/prisma/client.js";
 import { env } from "prisma/config";
+import { Request, Response } from "express";
 
 const url = new URL(env("DATABASE_URL"));
 
@@ -46,35 +47,133 @@ app.use(
 );
 
 // API Routes
-app.get('/api/user', (req, res) => {
-    res.send({ user: "Admin" });
-});
+app.get("/api/customer/:User_ID", async (req: Request, res: Response) => {
+  try {
+    const userId = Number(req.params.User_ID);
 
-app.get('/api/session', (req, res) => {
-    const sess = req.session;
-    res.send({ user: sess?.user ?? null });
-});
-
-app.get('/api/module/:module_id', async (req, res) => {
-    try {
-        const moduleId = Number(req.params.module_id);
-        if (Number.isNaN(moduleId)) {
-            return res.status(400).send({ error: 'Invalid module id' });
-        }
-
-        const rows = await prisma.leistung.findMany({
-            where: { Modulnummer: moduleId },
-            orderBy: { Timestamp: 'desc' },
-            take: 10
-        });
-        res.send(rows);
-    } catch (error) {
-        console.error('Database query failed:', error);
-        res.status(500).send({ error: 'Database request failed' });
+    if (Number.isNaN(userId)) {
+      return res.status(400).json({ message: "Wrong User_ID." });
     }
+
+    const customer = await prisma.kunde.findUnique({
+      where: {
+        User_ID: userId,
+      }
+    });
+
+    if (!customer) {
+      return res.status(404).json({ message: "Customer not found." });
+    }
+
+    return res.status(200).json(customer);
+  } catch (error) {
+    console.error("Error in /api/customer/:User_ID", error);
+    return res.status(500).json({ message: "Internal server error." });
+  }
 });
 
-app.post('/api/login', async (req, res) => {
+app.get("/api/solarmodule/:customerNumber", async (req: Request, res: Response) => {
+  try {
+    const customerNumber = Number(req.params.customerNumber);
+
+    if (Number.isNaN(customerNumber)) {
+      return res.status(400).json({ message: "Invalid customer number." });
+    }
+
+    const module = await prisma.solarmodul.findMany({
+      where: {
+        Kundennummer: customerNumber,
+      },
+      select: {
+        Solarmodultyp: {
+            select: {
+                Solarmodultypnummer: true,
+                Bezeichnung: true,
+                Umpp: true,
+                Impp: true,
+                Pmpp: true,
+          }
+        }
+      },
+      orderBy: {
+        Modulnummer: "asc",
+      },
+    });
+    
+    const result = module.map((m) => m.Solarmodultyp);
+
+    return res.status(200).json(result);
+
+  } catch (error) {
+    console.error("Error in /api/solarmodule/:customerNumber", error);
+    return res.status(500).json({ message: "Internal server error." });
+  }
+});
+
+app.get("/api/solarmodule/:moduleNumber/power", async (req: Request, res: Response) => {
+  try {
+    const moduleNumber = Number(req.params.moduleNumber);
+
+    if (Number.isNaN(moduleNumber)) {
+      return res.status(400).json({ message: "Invalid module number." });
+    }
+
+    const fromParam = req.query.from as string | undefined;
+    const toParam = req.query.to as string | undefined;
+
+    const to = toParam ? new Date(toParam) : new Date();
+
+    const from = fromParam
+      ? new Date(fromParam)
+      : new Date(to.getTime() - 24 * 60 * 60 * 1000);
+
+    if (isNaN(from.getTime()) || isNaN(to.getTime())) {
+      return res.status(400).json({
+        message: "Invalid time range.",
+      });
+    }
+
+    const power = await prisma.leistung.findMany({
+      where: {
+        Modulnummer: moduleNumber,
+        Timestamp: {
+          gte: from,
+          lte: to,
+        },
+      },
+      orderBy: {
+        Timestamp: "asc",
+      },
+      select: {
+        Timestamp: true,
+        Modulnummer: true,
+        Power_Out: true,
+      },
+    });
+
+    // Just one per hour
+    const hourlyData = power.filter((entry) => {
+      const date = new Date(entry.Timestamp);
+
+      return (
+        date.getMinutes() === 0
+      );
+    });
+
+    return res.status(200).json(
+      hourlyData
+    );
+
+  } catch (error) {
+    console.error("Error in /api/solarmodule/:moduleNumber/power", error);
+
+    return res.status(500).json({
+      message: "Internal server error.",
+    });
+  }
+});
+
+app.post('/api/login', async (req: Request, res: Response) => {
     const { username, password } = req.body;
     if (!username || !password) return res.status(400).send({ error: 'Missing credentials' });
 
@@ -98,7 +197,7 @@ app.post('/api/login', async (req, res) => {
     }
 });
 
-app.post('/api/logout', (req, res) => {
+app.post('/api/logout', (req: Request, res: Response) => {
     req.session.destroy((err) => {
         if (err) {
             console.error('Error occurred while destroying session:', err);
