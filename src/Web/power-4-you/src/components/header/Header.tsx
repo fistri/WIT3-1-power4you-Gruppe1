@@ -2,11 +2,11 @@
 import { memo, useState } from "react"
 import "./header.css"
 import { Image, Button, Modal, Input, IconButton, Drawer } from "rsuite"
-import login from "../../api/post/login"
-import logout from "../../api/post/logout"
 import { User } from "lucide-react"
 import { customerData } from "../../helper/testData"
 import ProfileOverview from "./ProfileOverview"
+import { logout } from "../../api/post/logout"
+import { login } from "../../api/post/login"
 
 const Header = (
     {
@@ -30,19 +30,24 @@ const Header = (
 
     const loginHandler = async (username: string, password: string) => {
         try {
-            const data = await login(username, password)
-            console.log('Login response:', data)
-            if (data.isLoggedIn) {
-                console.log('Login successful:', data)
+            const { success, data, error } = await login(username, password)
+            if (!success) {
+                console.error("Login failed:", error);
+                //TODO add toasts
+                return
+            }
+            if (data?.isLoggedIn) {
                 setLoggedIn(true)
-                setUser(data.user)
+                setUser(data?.user)
                 handleClose()
             }
             else {
-                console.error('Login failed:', data)
+                console.error("Login failed", data);
+                //TODO add toasts
             }
         } catch (err) {
-            console.error('Error:', err)
+            console.error('Error logging in:', err);
+            //TODO add toasts
             setLoggedIn(false)
             setUser(null)
         }
@@ -50,16 +55,23 @@ const Header = (
 
     const logoutHandler = async () => {
         try {
-            const data = await logout()
-            if (!data.isLoggedIn) {
+            const { success, data, error } = await logout()
+            if (!success) {
+                console.error("Logout failed:", error);
+                //TODO add toasts
+                return
+            }
+            if (!data?.isLoggedIn) {
                 setLoggedIn(false)
                 setUser(null)
             }
             else {
-                console.error('Logout failed:', data)
+                console.error("Logout failed");
+                //TODO add toasts
             }
         } catch (err) {
-            console.error('Error:', err)
+            console.error('Error logging out:', err);
+            //TODO add toasts
         }
     }
 

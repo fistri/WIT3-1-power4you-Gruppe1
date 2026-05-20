@@ -1,10 +1,10 @@
-import type { LogoutResponse } from "../../interface/logout";
+import type { Solarmodultyp } from "../../../generated/prisma";
 import type { OperationResult } from "../../interface/opertionResult";
 
-export const logout = async (): Promise<OperationResult<LogoutResponse>> => {
+export const getSolarModules = async (customerId: number): Promise<OperationResult<Solarmodultyp[]>> => {
     try {
-        const response = await fetch('http://localhost:3000/api/logout', {
-            method: 'POST',
+        const response = await fetch(`http://localhost:3000/api/solarmodule/${customerId}`, {
+            method: 'GET',
             credentials: 'include',
             headers: {
                 'Content-Type': 'application/json'
@@ -15,10 +15,10 @@ export const logout = async (): Promise<OperationResult<LogoutResponse>> => {
             const errorMessage = errorBody.message ?? `HTTP ${response.status}`;
             return { success: false, error: errorMessage };
         }
-        const data = await response.json();
-        return { success: true, data };
+        const solarModules = await response.json();
+        return { success: true, data: solarModules };
     } catch (error) {
-        const errorMessage = `Error logging out: ${(error as Error).message}`;
+        const errorMessage = `Error fetching solar module data for customer ${customerId}: ${(error as Error).message}`;
         return { success: false, error: errorMessage };
     }
 }

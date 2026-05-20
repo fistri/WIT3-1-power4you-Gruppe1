@@ -1,10 +1,10 @@
-import type { LogoutResponse } from "../../interface/logout";
 import type { OperationResult } from "../../interface/opertionResult";
+import type { Kunde } from "../../../generated/prisma/client";
 
-export const logout = async (): Promise<OperationResult<LogoutResponse>> => {
+export const getCustomer = async (userId: number): Promise<OperationResult<Kunde>> => {
     try {
-        const response = await fetch('http://localhost:3000/api/logout', {
-            method: 'POST',
+        const response = await fetch(`http://localhost:3000/api/customer/${userId}`, {
+            method: 'GET',
             credentials: 'include',
             headers: {
                 'Content-Type': 'application/json'
@@ -15,10 +15,10 @@ export const logout = async (): Promise<OperationResult<LogoutResponse>> => {
             const errorMessage = errorBody.message ?? `HTTP ${response.status}`;
             return { success: false, error: errorMessage };
         }
-        const data = await response.json();
-        return { success: true, data };
+        const customer = await response.json();
+        return { success: true, data: customer };
     } catch (error) {
-        const errorMessage = `Error logging out: ${(error as Error).message}`;
+        const errorMessage = `Error fetching customer data for user ${userId}: ${(error as Error).message}`;
         return { success: false, error: errorMessage };
     }
 }

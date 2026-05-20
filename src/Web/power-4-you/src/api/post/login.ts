@@ -1,5 +1,7 @@
+import type { LoginResponse } from "../../interface/login";
+import type { OperationResult } from "../../interface/opertionResult";
 
-const login = async (username: string, password: string) => {
+export const login = async (username: string, password: string): Promise<OperationResult<LoginResponse>> => {
     try {
         const response = await fetch('http://localhost:3000/api/login', {
             method: 'POST',
@@ -13,14 +15,14 @@ const login = async (username: string, password: string) => {
             })
         });
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            const errorBody = await response.json();
+            const errorMessage = errorBody.message ?? `HTTP ${response.status}`;
+            return { success: false, error: errorMessage };
         }
-        return response.json();
+        const data = await response.json();
+        return { success: true, data };
     } catch (error) {
-        console.error('Error logging in:', error);
-        throw error;
+        const errorMessage = `Error logging in: ${(error as Error).message}`;
+        return { success: false, error: errorMessage };
     }
-
 }
-
-export default login
