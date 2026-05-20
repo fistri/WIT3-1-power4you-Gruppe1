@@ -8,17 +8,18 @@ import "dotenv/config";
 import { PrismaMariaDb } from "@prisma/adapter-mariadb";
 import { PrismaClient } from "./generated/prisma/client.js";
 import { env } from "prisma/config";
+import { Resend } from "resend";
 import { Request, Response } from "express";
 
 const url = new URL(env("DATABASE_URL"));
 
 const adapter = new PrismaMariaDb({
-  host: url.hostname,
-  port: parseInt(url.port),
-  user: url.username,
-  password: url.password,
-  database: url.pathname.slice(1),
-  connectionLimit: 5,
+    host: url.hostname,
+    port: parseInt(url.port),
+    user: url.username,
+    password: url.password,
+    database: url.pathname.slice(1),
+    connectionLimit: 5,
 });
 const prisma = new PrismaClient({ adapter });
 
@@ -207,6 +208,43 @@ app.post('/api/logout', (req: Request, res: Response) => {
       res.send({ isLoggedIn: false });
     }
   });
+});
+
+//Email
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+app.post("/contact", async (req, res) => {
+
+    try {
+
+        const { name, email, message, subject } = req.body;
+
+        await resend.emails.send({
+            from: 'Acme <onboarding@resend.dev>',
+            to: 'power4you@gbs-labor.de', //<--- USE A DIFFERENT EMAIL ADRESS FOR TESTING
+            template: {
+                id: 'contactformular',
+                variables: {
+                    NAME: name,
+                    EMAILADDRESS: email,
+                    MESSAGE: message,
+                    SUBJECT: subject
+                },
+            },
+        });
+
+        res.json({
+            success: true
+        });
+
+    } catch (error) {
+
+        console.error(error);
+
+        res.status(500).json({
+            success: false
+        });
+    }
 });
 
 // Start server

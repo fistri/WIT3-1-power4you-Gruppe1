@@ -1,7 +1,6 @@
-import { Button, Modal } from "rsuite"
 import "./footer.css"
 import { memo, useState } from "react"
-import { Drawer } from 'rsuite'
+import { Drawer, Button } from 'rsuite'
 import ContactFormular from "./ContactFormular"
 
 const Footer = () => {
