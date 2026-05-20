@@ -9,6 +9,13 @@ export const columnDefsAgGrid: ColDef[] = [
         filter: true 
     },
     { 
+        field: 'Modulnummer', 
+        headerName: 'Module Number', 
+        maxWidth: 100,
+        sortable: true, 
+        filter: true 
+    },
+    { 
         field: 'Bezeichnung', 
         headerName: 'Description', 
         sortable: true, 

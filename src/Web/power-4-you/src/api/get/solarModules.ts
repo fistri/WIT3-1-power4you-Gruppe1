@@ -1,7 +1,7 @@
-import type { Solarmodultyp } from "../../../generated/prisma";
+import type { SolarModule } from "../../interface/module";
 import type { OperationResult } from "../../interface/opertionResult";
 
-export const getSolarModules = async (customerId: number): Promise<OperationResult<Solarmodultyp[]>> => {
+export const getSolarModules = async (customerId: number): Promise<OperationResult<SolarModule[]>> => {
     try {
         const response = await fetch(`http://localhost:3000/api/solarmodule/${customerId}`, {
             method: 'GET',

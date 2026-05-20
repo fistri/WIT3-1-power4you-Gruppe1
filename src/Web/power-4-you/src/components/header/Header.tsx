@@ -3,21 +3,23 @@ import { memo, useState } from "react"
 import "./header.css"
 import { Image, Button, Modal, Input, IconButton, Drawer } from "rsuite"
 import { User } from "lucide-react"
-import { customerData } from "../../helper/testData"
 import ProfileOverview from "./ProfileOverview"
 import { logout } from "../../api/post/logout"
 import { login } from "../../api/post/login"
+import type { Kunde } from "../../../generated/prisma"
 
 const Header = (
     {
         loggedIn,
         setLoggedIn,
-        setUser
+        setUser,
+        customerData
     }:
         {
             loggedIn: boolean,
             setLoggedIn: any,
-            setUser: any
+            setUser: any,
+            customerData: Kunde | undefined
         }
 ) => {
     const [open, setOpen] = useState(false)
@@ -117,10 +119,10 @@ const Header = (
             </Modal>
             <Drawer open={drawerOpen} onClose={() => setDrawerOpen(false)}>
                 <Drawer.Header>
-                    <Drawer.Title>{customerData.Nachname}, {customerData.Vorname} - {customerData.Kundennummer}</Drawer.Title> {/*TODO: Replace with actual customer data */}
+                    <Drawer.Title>{customerData?.Nachname}, {customerData?.Vorname} - {customerData?.Kundennummer}</Drawer.Title>
                 </Drawer.Header>
                 <Drawer.Body>
-                    <ProfileOverview customer={customerData} /> {/*TODO: Replace with actual customer data */}
+                    <ProfileOverview customer={customerData} />
                 </Drawer.Body>
             </Drawer>
         </div>

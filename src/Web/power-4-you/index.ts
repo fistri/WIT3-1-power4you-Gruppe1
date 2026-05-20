@@ -14,12 +14,12 @@ import { Request, Response } from "express";
 const url = new URL(env("DATABASE_URL"));
 
 const adapter = new PrismaMariaDb({
-    host: url.hostname,
-    port: parseInt(url.port),
-    user: url.username,
-    password: url.password,
-    database: url.pathname.slice(1),
-    connectionLimit: 5,
+  host: url.hostname,
+  port: parseInt(url.port),
+  user: url.username,
+  password: url.password,
+  database: url.pathname.slice(1),
+  connectionLimit: 5,
 });
 const prisma = new PrismaClient({ adapter });
 
@@ -86,6 +86,7 @@ app.get("/api/solarmodule/:customerNumber", async (req: Request, res: Response) 
         Kundennummer: customerNumber,
       },
       select: {
+        Modulnummer: true,
         Solarmodultyp: {
           select: {
             Solarmodultypnummer: true,
@@ -101,7 +102,10 @@ app.get("/api/solarmodule/:customerNumber", async (req: Request, res: Response) 
       },
     });
 
-    const result = module.map((m) => m.Solarmodultyp);
+    const result = module.map((m) => ({
+      ...m.Solarmodultyp,
+      Modulnummer: m.Modulnummer,
+    }));
 
     return res.status(200).json(result);
 
@@ -215,36 +219,36 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 app.post("/contact", async (req, res) => {
 
-    try {
+  try {
 
-        const { name, email, message, subject } = req.body;
+    const { name, email, message, subject } = req.body;
 
-        await resend.emails.send({
-            from: 'Acme <onboarding@resend.dev>',
-            to: 'power4you@gbs-labor.de', //<--- USE A DIFFERENT EMAIL ADRESS FOR TESTING
-            template: {
-                id: 'contactformular',
-                variables: {
-                    NAME: name,
-                    EMAILADDRESS: email,
-                    MESSAGE: message,
-                    SUBJECT: subject
-                },
-            },
-        });
+    await resend.emails.send({
+      from: 'Acme <onboarding@resend.dev>',
+      to: 'power4you@gbs-labor.de', //<--- USE A DIFFERENT EMAIL ADRESS FOR TESTING
+      template: {
+        id: 'contactformular',
+        variables: {
+          NAME: name,
+          EMAILADDRESS: email,
+          MESSAGE: message,
+          SUBJECT: subject
+        },
+      },
+    });
 
-        res.json({
-            success: true
-        });
+    res.json({
+      success: true
+    });
 
-    } catch (error) {
+  } catch (error) {
 
-        console.error(error);
+    console.error(error);
 
-        res.status(500).json({
-            success: false
-        });
-    }
+    res.status(500).json({
+      success: false
+    });
+  }
 });
 
 // Start server
