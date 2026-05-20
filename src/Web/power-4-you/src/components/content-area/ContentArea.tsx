@@ -8,6 +8,7 @@ import { getSolarModules } from "../../api/get/solarModules"
 import type { Kunde } from "../../../generated/prisma"
 import { getPower } from "../../api/get/power"
 import type { SolarModule } from "../../interface/module"
+import type { RowClickedEvent } from "ag-grid-community";
 
 const ContentArea = (
     {
@@ -23,7 +24,7 @@ const ContentArea = (
     const [powerOutput, setPowerOutput] = useState<{ time: string; powerOut: number }[] | undefined>(undefined)
 
 
-    const handleRowClick = (event: any) => {
+    const handleRowClick = (event: RowClickedEvent<SolarModule>) => {
         setSelectedModule(event.data)
         setOpen(true)
     }
