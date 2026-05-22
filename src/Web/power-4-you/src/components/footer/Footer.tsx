@@ -32,7 +32,7 @@ const Footer = () => {
                     <p>Bei redaktionellen Inhalten:</p>
                     <p>Verantwortlich nach § 55 Abs.2 RStV<br />Moritz Schreiberling<br />Musterstraße 2<br />80999 München</p>
                 </Drawer.Body> : <Drawer.Body>
-                    <ContactFormular />
+                    <ContactFormular setOpen={setOpen} />
                 </Drawer.Body>}
             </Drawer>
         </div>

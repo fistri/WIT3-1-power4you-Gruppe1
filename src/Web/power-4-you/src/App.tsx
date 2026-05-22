@@ -9,6 +9,8 @@ import type { Kunde, User } from "../generated/prisma"
 import { getCustomer } from "./api/get/customer"
 import { useToaster } from "rsuite"
 import Toast from "./helper/Toast"
+import { CustomProvider } from 'rsuite';
+
 
 const modules = [AllCommunityModule];
 
@@ -35,13 +37,15 @@ const App = () => {
   }, [user]);
 
   return (
-    <AgGridProvider modules={modules}>
-      <div className="canvas flex-column">
-        <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} setUser={setUser} customerData={customer} />
-        {loggedIn ? <ContentArea customerData={customer} /> : <LoginAlert />}
-        <Footer />
-      </div>
-    </AgGridProvider>
+    <CustomProvider>
+      <AgGridProvider modules={modules}>
+        <div className="canvas flex-column">
+          <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} setUser={setUser} customerData={customer} />
+          {loggedIn ? <ContentArea customerData={customer} /> : <LoginAlert />}
+          <Footer />
+        </div>
+      </AgGridProvider>
+    </CustomProvider>
   )
 }
 

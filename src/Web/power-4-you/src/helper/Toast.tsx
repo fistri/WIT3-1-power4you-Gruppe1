@@ -1,9 +1,9 @@
 import { Notification } from 'rsuite';
 
 
-const Toast = ({message}: {message: string}) => {
+const Toast = ({message, type = "error"}: {message: string, type?: "error" | "success"}) => {
     return (
-        <Notification type="error" header="Error">
+        <Notification type={type} header="Error" closable>
             {message}
         </Notification>
     )

@@ -4,9 +4,9 @@ import {
     ButtonToolbar,
     Button,
     Textarea,
-    Notification,
     toaster
 } from "rsuite";
+import Toast from "../../helper/Toast";
 
 const FormField = ({
     name,
@@ -28,7 +28,7 @@ const FormField = ({
     </Form.Group>
 );
 
-const ContactFormular = () => {
+const ContactFormular = ({setOpen}: {setOpen: any}) => {
 
     const [formValue, setFormValue] = useState({
         subject: "",
@@ -40,9 +40,7 @@ const ContactFormular = () => {
     const handleSubmit = async () => {
 
         if (!formValue.subject || !formValue.name || !formValue.email || !formValue.textarea) {
-            toaster.push(<Notification type="error">
-                Please fill out all fields!
-            </Notification>);
+            toaster.push(<Toast message="Please fill in all fields." />, { placement: "topCenter" });
             return
         }
 
@@ -70,18 +68,14 @@ const ContactFormular = () => {
 
             if (!response.ok || !data.success) {
                 toaster.push(
-                    <Notification type="error" header="Error">
-                        The email failed to send, please try again later.
-                    </Notification>,
+                    <Toast message="Failed to send the email. Please try again later." />,
                     { placement: "topCenter" }
                 );
                 return;
             }
 
             toaster.push(
-                <Notification type="success" header="Success">
-                    The email has been sent successfully.
-                </Notification>,
+                <Toast message={"The email has been sent successfully."} type="success"/>,
                 { placement: "topCenter" }
             );
             setFormValue({
@@ -95,9 +89,7 @@ const ContactFormular = () => {
 
         } catch (err) {
             toaster.push(
-                <Notification type="error" header="Network Error">
-                    Server not reachable.
-                </Notification>,
+                <Toast message="Network Error: Server not reachable." />,
                 { placement: "topCenter" }
             );
             console.error(err);
@@ -143,7 +135,7 @@ const ContactFormular = () => {
                     >
                         Submit
                     </Button>
-                    <Button appearance="default">
+                    <Button appearance="default" onClick={() => setOpen(false)}>
                         Cancel
                     </Button>
                 </ButtonToolbar>
