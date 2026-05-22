@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "server": "tsc index.ts --ignoreConfig && node index.js",
-    "test": "mocha --require ts-node/register test/*/.ts"
+    "test": "npx mocha --require ts-node/register test/indexTest.ts"
   },
   "dependencies": {
     "@prisma/adapter-mariadb": "^7.8.0",
