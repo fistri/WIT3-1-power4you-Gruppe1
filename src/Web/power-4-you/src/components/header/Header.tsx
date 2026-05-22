@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { memo, useState } from "react"
 import "./header.css"
-import { Image, Button, Modal, Input, IconButton, Drawer, useToaster, useToaster } from "rsuite"
+import { Image, Button, Modal, Input, IconButton, Drawer, useToaster } from "rsuite"
 import { User } from "lucide-react"
 import ProfileOverview from "./ProfileOverview"
 import { logout } from "../../api/post/logout"
