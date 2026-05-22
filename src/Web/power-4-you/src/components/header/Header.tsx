@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { memo, useState } from "react"
 import "./header.css"
-import { Image, Button, Modal, Input, IconButton, Drawer } from "rsuite"
+import { Image, Button, Modal, Input, IconButton, Drawer, useToaster, useToaster } from "rsuite"
 import { User } from "lucide-react"
 import ProfileOverview from "./ProfileOverview"
 import { logout } from "../../api/post/logout"
 import { login } from "../../api/post/login"
 import type { Kunde } from "../../../generated/prisma"
+import Toast from "../../helper/Toast"
 
 const Header = (
     {
@@ -26,6 +27,7 @@ const Header = (
     const [drawerOpen, setDrawerOpen] = useState(false)
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+    const toaster = useToaster();
 
     const handleOpen = () => setOpen(true)
     const handleClose = () => setOpen(false)
@@ -34,8 +36,8 @@ const Header = (
         try {
             const { success, data, error } = await login(username, password)
             if (!success) {
-                console.error("Login failed:", error);
-                //TODO add toasts
+                const errorMessage = `Login failed: ${error}`;
+                toaster.push(<Toast message={errorMessage} />, { placement: "topCenter" });
                 return
             }
             if (data?.isLoggedIn) {
@@ -44,12 +46,12 @@ const Header = (
                 handleClose()
             }
             else {
-                console.error("Login failed", data);
-                //TODO add toasts
+                const errorMessage = `Login failed`;
+                toaster.push(<Toast message={errorMessage} />, { placement: "topCenter" });
             }
         } catch (err) {
-            console.error('Error logging in:', err);
-            //TODO add toasts
+            const errorMessage = `Login failed: ${err}`;
+            toaster.push(<Toast message={errorMessage} />, { placement: "topCenter" });
             setLoggedIn(false)
             setUser(null)
         }
@@ -59,8 +61,8 @@ const Header = (
         try {
             const { success, data, error } = await logout()
             if (!success) {
-                console.error("Logout failed:", error);
-                //TODO add toasts
+                const errorMessage = `Logout failed: ${error}`;
+                toaster.push(<Toast message={errorMessage} />, { placement: "topCenter" });
                 return
             }
             if (!data?.isLoggedIn) {
@@ -68,12 +70,12 @@ const Header = (
                 setUser(null)
             }
             else {
-                console.error("Logout failed");
-                //TODO add toasts
+                const errorMessage = `Logout failed`;
+                toaster.push(<Toast message={errorMessage} />, { placement: "topCenter" });
             }
         } catch (err) {
-            console.error('Error logging out:', err);
-            //TODO add toasts
+            const errorMessage = `Error logging out: ${err}`;
+            toaster.push(<Toast message={errorMessage} />, { placement: "topCenter" });
         }
     }
 

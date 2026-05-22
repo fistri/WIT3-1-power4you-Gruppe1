@@ -7,6 +7,8 @@ import { AllCommunityModule } from 'ag-grid-community';
 import { AgGridProvider } from 'ag-grid-react';
 import type { Kunde, User } from "../generated/prisma"
 import { getCustomer } from "./api/get/customer"
+import { useToaster } from "rsuite"
+import Toast from "./helper/Toast"
 
 const modules = [AllCommunityModule];
 
@@ -14,6 +16,7 @@ const App = () => {
   const [user, setUser] = useState<null | User>(null)
   const [customer, setCustomer] = useState<undefined | Kunde>(undefined)
   const [loggedIn, setLoggedIn] = useState(false)
+  const toaster = useToaster();
 
   useEffect(() => {
     if (!user) return;
@@ -21,8 +24,8 @@ const App = () => {
     const fetchCustomerData = async () => {
       const { success, data, error } = await getCustomer(user.User_ID);
       if (!success) {
-        //TODO add toasts
-        console.error("Failed to fetch customer data:", error);
+        const errorMessage = `Failed to fetch customer data: ${error}`;
+        toaster.push(<Toast message={errorMessage} />, { placement: "topCenter" });
       } else {
         setCustomer(data);
       }

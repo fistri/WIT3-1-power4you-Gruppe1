@@ -9,6 +9,8 @@ import type { Kunde } from "../../../generated/prisma"
 import { getPower } from "../../api/get/power"
 import type { SolarModule } from "../../interface/module"
 import type { RowClickedEvent } from "ag-grid-community";
+import { useToaster } from "rsuite"
+import Toast from "../../helper/Toast"
 
 const ContentArea = (
     {
@@ -22,7 +24,7 @@ const ContentArea = (
     const [isLoading, setIsLoading] = useState(false)
     const [solarModules, setSolarModules] = useState<SolarModule[] | undefined>(undefined)
     const [powerOutput, setPowerOutput] = useState<{ time: string; powerOut: number }[] | undefined>(undefined)
-
+    const toaster = useToaster();
 
     const handleRowClick = (event: RowClickedEvent<SolarModule>) => {
         setSelectedModule(event.data)
@@ -36,8 +38,8 @@ const ContentArea = (
             const { success, data, error } = await getSolarModules(customerData.Kundennummer)
             setIsLoading(false)
             if (!success) {
-                console.error("Failed to fetch solar modules:", error);
-                //TODO add toasts
+                const errorMessage = `Failed to fetch solar modules: ${error}`;
+                toaster.push(<Toast message={errorMessage} />, { placement: "topCenter" });
             } else {
                 setSolarModules(data);
             }
@@ -54,8 +56,8 @@ const ContentArea = (
             }
             const { success, data, error } = await getPower(selectedModule.Modulnummer)
             if (!success) {
-                console.error("Failed to fetch power output:", error);
-                //TODO add toasts
+                const errorMessage = `Failed to fetch power output: ${error}`;
+                toaster.push(<Toast message={errorMessage} />, { placement: "topCenter" });
             } else {
                 const powerData = data?.map((entry) => ({
                     time: new Date(entry.Timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
