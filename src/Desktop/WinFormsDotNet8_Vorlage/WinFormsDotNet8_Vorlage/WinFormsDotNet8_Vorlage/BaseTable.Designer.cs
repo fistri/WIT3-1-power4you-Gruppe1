@@ -1,6 +1,6 @@
 ﻿namespace WinFormsDotNet8_Vorlage
 {
-    partial class TableSolarType
+    partial class BaseTable
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             btnGetData = new Button();
-            dGSolar = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dGSolar).BeginInit();
+            dGData = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dGData).BeginInit();
             SuspendLayout();
             // 
             // btnGetData
@@ -38,41 +38,41 @@
             btnGetData.Location = new Point(12, 227);
             btnGetData.Name = "btnGetData";
             btnGetData.Size = new Size(129, 23);
-            btnGetData.TabIndex = 3;
+            btnGetData.TabIndex = 5;
             btnGetData.Text = "Get Data";
             btnGetData.UseVisualStyleBackColor = true;
             btnGetData.Click += btnGetData_Click;
             // 
-            // dGSolar
+            // dGData
             // 
-            dGSolar.AllowUserToAddRows = false;
-            dGSolar.AllowUserToDeleteRows = false;
-            dGSolar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dGSolar.Location = new Point(12, 12);
-            dGSolar.Name = "dGSolar";
-            dGSolar.ReadOnly = true;
-            dGSolar.Size = new Size(548, 195);
-            dGSolar.TabIndex = 2;
-            dGSolar.CellMouseDoubleClick += dGSolar_CellMouseDoubleClick;
+            dGData.AllowUserToAddRows = false;
+            dGData.AllowUserToDeleteRows = false;
+            dGData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dGData.Location = new Point(12, 12);
+            dGData.Name = "dGData";
+            dGData.ReadOnly = true;
+            dGData.Size = new Size(548, 195);
+            dGData.TabIndex = 4;
+            dGData.CellMouseDoubleClick += dGData_CellMouseDoubleClick;
             // 
-            // TableSolarType
+            // BaseTable
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(45, 45, 48);
             ClientSize = new Size(800, 450);
             Controls.Add(btnGetData);
-            Controls.Add(dGSolar);
+            Controls.Add(dGData);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "TableSolarType";
-            Text = "TableSolar";
-            ((System.ComponentModel.ISupportInitialize)dGSolar).EndInit();
+            Name = "BaseTable";
+            Text = "BaseTable";
+            ((System.ComponentModel.ISupportInitialize)dGData).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button btnGetData;
-        private DataGridView dGSolar;
+        public Button btnGetData;
+        public DataGridView dGData;
     }
 }

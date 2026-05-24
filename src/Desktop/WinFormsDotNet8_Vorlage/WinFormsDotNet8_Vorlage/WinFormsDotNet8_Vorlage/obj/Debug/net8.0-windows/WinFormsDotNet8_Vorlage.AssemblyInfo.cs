@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WinFormsDotNet8_Vorlage")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a2edd5f3b0e036b104aa7676bd28ed25d18fbf2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aab9245a479777daa0b35fab67d09c37f626ccb9")]
 [assembly: System.Reflection.AssemblyProductAttribute("WinFormsDotNet8_Vorlage")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WinFormsDotNet8_Vorlage")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

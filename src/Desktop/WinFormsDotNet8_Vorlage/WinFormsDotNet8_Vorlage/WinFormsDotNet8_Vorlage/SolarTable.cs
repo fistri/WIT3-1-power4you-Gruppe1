@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,23 +8,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WeifenLuo.WinFormsUI.Docking;
-using MySql.Data.MySqlClient;
-using System.Data.Common;
 using WinFormsDotNet8_Vorlage.Models;
 
 namespace WinFormsDotNet8_Vorlage
 {
-    public partial class TableSolarType : DockContent
+    public partial class SolarTable : BaseTable
     {
-        string sConnection = @"Server=w012ac34.kasserver.com;Uid=d03a150f;Pwd=Tp678CWc859CX4Xg;Database=d03a150f;";
-        public TableSolarType()
+        public SolarTable()
         {
             InitializeComponent();
-            //this.dGSolar.MouseDown += new System.Windows.Forms.MouseEventHandler (this.myDataGrid_MouseDown);
         }
 
+        string sConnection = @"Server=w012ac34.kasserver.com;Uid=d03a150f;Pwd=Tp678CWc859CX4Xg;Database=d03a150f;";
+
         private void btnGetData_Click(object sender, EventArgs e)
+        {
+            getData();
+        }
+        protected override void getData()
         {
             using (MySqlConnection connection = new MySqlConnection(sConnection))
             {
@@ -35,26 +37,20 @@ namespace WinFormsDotNet8_Vorlage
                 MySqlDataReader reader = command.ExecuteReader();
                 DataTable dt = new DataTable();
                 dt.Load(reader);
-                dGSolar.DataSource = dt;
+                base.dGData.DataSource = dt;
 
             }
         }
-
-        private void dGSolar_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dGData_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.RowIndex > -1)
-            {
-                var val = this.dGSolar[e.ColumnIndex, e.RowIndex].Value.ToString();
-                Console.WriteLine(val);
-            }
+            showDetail(e);
         }
-
-        private void dGSolar_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        protected override void showDetail(DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dGSolar.Rows[e.RowIndex];
-              
+                DataGridViewRow row = base.dGData.Rows[e.RowIndex];
+
                 int id = Convert.ToInt32(row.Cells["Solarmodultypnummer"].Value);
                 Solarmodultyp solarTyp = new Solarmodultyp();
 
@@ -67,7 +63,7 @@ namespace WinFormsDotNet8_Vorlage
                     MySqlCommand command = new MySqlCommand(sQuery, connection);
                     MySqlDataReader reader = command.ExecuteReader();
 
-                    if(reader.Read())
+                    if (reader.Read())
                     {
                         solarTyp.Solarmodultypnummer = reader.GetInt32("Solarmodultypnummer");
                         solarTyp.Bezeichnung = reader.GetString("Bezeichnung");

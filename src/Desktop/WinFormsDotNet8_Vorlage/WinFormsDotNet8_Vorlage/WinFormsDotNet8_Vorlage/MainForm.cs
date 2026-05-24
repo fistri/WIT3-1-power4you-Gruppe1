@@ -17,8 +17,8 @@ namespace WinFormsDotNet8_Vorlage
         private readonly CustomerDetailView _customerDetailView;
         private readonly LogIn _logIn;
         private readonly SolarTypeDetailView _solarDetailView;
-        private readonly TableCustomer _tableCustomer;
-        private readonly TableSolarType _tableSolar;
+        private readonly CustomerTable _customerTable;
+        private readonly SolarTable _solarTable;
 
         public MainForm()
         {
@@ -29,8 +29,8 @@ namespace WinFormsDotNet8_Vorlage
             _customerDetailView = new CustomerDetailView();
             _logIn = new LogIn();
             _solarDetailView = new SolarTypeDetailView();
-            _tableCustomer = new TableCustomer();
-            _tableSolar = new TableSolarType();
+            _solarTable = new SolarTable();
+            _customerTable = new CustomerTable();
 
             LoadSidebar();
             LoadForms();
@@ -40,8 +40,8 @@ namespace WinFormsDotNet8_Vorlage
         {
             _customerDetailView.Show(mainDockPanel, DockState.Document);
             _solarDetailView.Show(mainDockPanel, DockState.Document);
-            _tableCustomer.Show(mainDockPanel, DockState.Document);
-            _tableSolar.Show(mainDockPanel, DockState.Document);
+            _solarTable.Show(mainDockPanel, DockState.Document);
+            _customerTable.Show(mainDockPanel, DockState.Document);
 
             _logIn.Activate();
         }
@@ -59,10 +59,10 @@ namespace WinFormsDotNet8_Vorlage
             {
                 
                 case "solarmodultyp":
-                    targetForm = _tableSolar;
+                    targetForm = _solarTable;
                     break;
                 case "kunden":
-                    targetForm = _tableCustomer;
+                    targetForm = _customerTable;
                     break;
                 case "firmen":                    
                    // targetForm = _predictionForm;

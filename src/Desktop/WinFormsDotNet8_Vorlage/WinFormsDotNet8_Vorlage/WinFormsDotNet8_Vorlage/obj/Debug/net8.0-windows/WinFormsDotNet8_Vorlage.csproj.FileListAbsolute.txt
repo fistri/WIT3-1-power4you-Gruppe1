@@ -263,8 +263,6 @@ E:\VisualStudio\Project\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorl
 E:\VisualStudio\Project\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.Properties.Resources.resources
 E:\VisualStudio\Project\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.SideBar.resources
 E:\VisualStudio\Project\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.SolarTypeDetailView.resources
-E:\VisualStudio\Project\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.TableCustomer.resources
-E:\VisualStudio\Project\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.TableSolarType.resources
 E:\VisualStudio\Project\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.csproj.GenerateResource.cache
 E:\VisualStudio\Project\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.GeneratedMSBuildEditorConfig.editorconfig
 E:\VisualStudio\Project\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.AssemblyInfoInputs.cache
@@ -278,3 +276,5 @@ E:\VisualStudio\Project\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorl
 E:\VisualStudio\Project\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.genruntimeconfig.cache
 E:\VisualStudio\Project\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\ref\WinFormsDotNet8_Vorlage.dll
 E:\VisualStudio\Project\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.BaseTable.resources
+E:\VisualStudio\Project\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.CustomerTable.resources
+E:\VisualStudio\Project\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.SolarTable.resources
