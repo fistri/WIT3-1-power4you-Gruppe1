@@ -53,6 +53,7 @@
             dGSolar.ReadOnly = true;
             dGSolar.Size = new Size(548, 195);
             dGSolar.TabIndex = 2;
+            dGSolar.CellMouseDoubleClick += dGSolar_CellMouseDoubleClick;
             // 
             // TableSolarType
             // 

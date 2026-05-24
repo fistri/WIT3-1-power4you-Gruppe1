@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using WeifenLuo.WinFormsUI.Docking;
 using MySql.Data.MySqlClient;
 using System.Data.Common;
+using WinFormsDotNet8_Vorlage.Models;
 
 namespace WinFormsDotNet8_Vorlage
 {
@@ -39,21 +40,6 @@ namespace WinFormsDotNet8_Vorlage
             }
         }
 
-        /*    private void myDataGrid_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
-            {
-                //DataGridView myGrid = (this)sender;
-                DataGridView.HitTestInfo hti;
-                hti = dGSolar.HitTest(e.X, e.Y);
-                string message = "You clicked ";
-
-                Console.WriteLine(message + hti.RowIndex);
-
-                dGSolar.get
-            }*/
-        // Source - https://stackoverflow.com/a/33358852
-        // Posted by Gregg
-        // Retrieved 2026-05-11, License - CC BY-SA 3.0
-
         private void dGSolar_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex > -1)
@@ -63,5 +49,36 @@ namespace WinFormsDotNet8_Vorlage
             }
         }
 
+        private void dGSolar_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dGSolar.Rows[e.RowIndex];
+              
+                int id = Convert.ToInt32(row.Cells["Solarmodultypnummer"].Value);
+                Solarmodultyp solarTyp = new Solarmodultyp();
+
+                using (MySqlConnection connection = new MySqlConnection(sConnection))
+                {
+                    connection.Open();
+
+                    string sQuery = $"SELECT * FROM Solarmodultyp WHERE Solarmodultypnummer = {id}";
+
+                    MySqlCommand command = new MySqlCommand(sQuery, connection);
+                    MySqlDataReader reader = command.ExecuteReader();
+
+                    if(reader.Read())
+                    {
+                        solarTyp.Solarmodultypnummer = reader.GetInt32("Solarmodultypnummer");
+                        solarTyp.Bezeichnung = reader.GetString("Bezeichnung");
+                        solarTyp.Umpp = reader.GetFloat("Umpp");
+                        solarTyp.Impp = reader.GetFloat("Impp");
+                        solarTyp.Pmpp = reader.GetFloat("Pmpp");
+                    }
+                }
+                SolarTypeDetailView detail = new SolarTypeDetailView(solarTyp);
+                detail.Show();
+            }
+        }
     }
 }

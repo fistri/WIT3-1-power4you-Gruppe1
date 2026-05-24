@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FMLIncbseZ0=",
+  "dgSpecHash": "cqTQJffR4e8=",
   "success": true,
-  "projectFilePath": "E:\\Visual Studio Projekte\\repos\\src\\Desktop\\Power4You\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage.csproj",
+  "projectFilePath": "E:\\VisualStudio\\Project\\src\\Desktop\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Faihok\\.nuget\\packages\\bouncycastle.cryptography\\2.6.2\\bouncycastle.cryptography.2.6.2.nupkg.sha512",
     "C:\\Users\\Faihok\\.nuget\\packages\\dockpanelsuite\\3.1.1\\dockpanelsuite.3.1.1.nupkg.sha512",

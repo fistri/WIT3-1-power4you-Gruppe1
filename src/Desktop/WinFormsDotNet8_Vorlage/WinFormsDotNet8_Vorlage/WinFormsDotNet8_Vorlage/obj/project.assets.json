@@ -2304,11 +2304,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Visual Studio Projekte\\repos\\src\\Desktop\\Power4You\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage.csproj",
+      "projectUniqueName": "E:\\VisualStudio\\Project\\src\\Desktop\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage.csproj",
       "projectName": "WinFormsDotNet8_Vorlage",
-      "projectPath": "E:\\Visual Studio Projekte\\repos\\src\\Desktop\\Power4You\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage.csproj",
+      "projectPath": "E:\\VisualStudio\\Project\\src\\Desktop\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage.csproj",
       "packagesPath": "C:\\Users\\Faihok\\.nuget\\packages\\",
-      "outputPath": "E:\\Visual Studio Projekte\\repos\\src\\Desktop\\Power4You\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\obj\\",
+      "outputPath": "E:\\VisualStudio\\Project\\src\\Desktop\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Faihok\\AppData\\Roaming\\NuGet\\NuGet.Config",
