@@ -15,7 +15,7 @@ import { CustomProvider } from 'rsuite';
 const modules = [AllCommunityModule];
 
 const App = () => {
-  const [user, setUser] = useState<null | User>(null)
+  const [user, setUser] = useState<undefined | User>(undefined)
   const [customer, setCustomer] = useState<undefined | Kunde>(undefined)
   const [loggedIn, setLoggedIn] = useState(false)
   const toaster = useToaster();
@@ -24,7 +24,7 @@ const App = () => {
     if (!user) return;
 
     const fetchCustomerData = async () => {
-      const { success, data, error } = await getCustomer(user.User_ID);
+      const { success, data, error } = await getCustomer(user);
       if (!success) {
         const errorMessage = `Failed to fetch customer data: ${error}`;
         toaster.push(<Toast message={errorMessage} />, { placement: "topCenter" });
@@ -41,7 +41,7 @@ const App = () => {
       <AgGridProvider modules={modules}>
         <div className="canvas flex-column">
           <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} setUser={setUser} customerData={customer} />
-          {loggedIn ? <ContentArea customerData={customer} /> : <LoginAlert />}
+          {loggedIn ? <ContentArea customerData={customer} user={user} /> : <LoginAlert />}
           <Footer />
         </div>
       </AgGridProvider>

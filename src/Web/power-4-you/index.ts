@@ -9,7 +9,7 @@ import { PrismaMariaDb } from "@prisma/adapter-mariadb";
 import { PrismaClient } from "./generated/prisma/client.js";
 import { env } from "prisma/config";
 import { Resend } from "resend";
-import { Request, Response } from "express";
+import { Request, Response, NextFunction } from "express";
 
 const url = new URL(env("DATABASE_URL"));
 
@@ -33,7 +33,6 @@ app.use(
     credentials: true,
   })
 );
-
 app.use(
   session({
     secret: env("SESSION_SECRET") || "dev-secret",
@@ -47,8 +46,34 @@ app.use(
   })
 );
 
+const requireApiKey = async (req: Request, res: Response, next: NextFunction) => {
+    let auth = req.headers.authorization;
+
+    if (!auth) {
+        res.status(401).send("Unauthorized");
+        return;
+    }
+    if (!auth.startsWith("Bearer ")) {
+        res.status(401).send("Unauthorized");
+        return;
+    }
+
+    auth = auth.split(" ")[1];
+
+    const user = await prisma.user.findFirst({
+        where: { Api_key: auth }
+    });
+
+    if (!user) {
+        res.status(401).send("Unauthorized");
+        return;
+    }
+
+    next();
+};
+
 // API Routes
-app.get("/api/customer/:User_ID", async (req: Request, res: Response) => {
+app.get("/api/customer/:User_ID", requireApiKey, async (req: Request, res: Response) => {
   try {
     const userId = Number(req.params.User_ID);
 
@@ -73,7 +98,7 @@ app.get("/api/customer/:User_ID", async (req: Request, res: Response) => {
   }
 });
 
-app.get("/api/solarmodule/:customerNumber", async (req: Request, res: Response) => {
+app.get("/api/solarmodule/:customerNumber", requireApiKey, async (req: Request, res: Response) => {
   try {
     const customerNumber = Number(req.params.customerNumber);
 
@@ -115,7 +140,7 @@ app.get("/api/solarmodule/:customerNumber", async (req: Request, res: Response) 
   }
 });
 
-app.get("/api/solarmodule/:moduleNumber/power", async (req: Request, res: Response) => {
+app.get("/api/solarmodule/:moduleNumber/power", requireApiKey, async (req: Request, res: Response) => {
   try {
     const moduleNumber = Number(req.params.moduleNumber);
 

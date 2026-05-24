@@ -1,13 +1,15 @@
+import type { User } from "../../../generated/prisma";
 import type { SolarModule } from "../../interface/module";
 import type { OperationResult } from "../../interface/opertionResult";
 
-export const getSolarModules = async (customerId: number): Promise<OperationResult<SolarModule[]>> => {
+export const getSolarModules = async (customerId: number, user: User): Promise<OperationResult<SolarModule[]>> => {
     try {
         const response = await fetch(`http://localhost:3000/api/solarmodule/${customerId}`, {
             method: 'GET',
             credentials: 'include',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${user.Api_key}`
             }
         });
         if (!response.ok) {

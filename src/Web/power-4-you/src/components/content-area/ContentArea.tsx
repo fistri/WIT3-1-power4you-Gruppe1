@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 import Drawer from "rsuite/esm/Drawer/Drawer"
 import { CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis, ResponsiveContainer } from 'recharts';
 import { getSolarModules } from "../../api/get/solarModules"
-import type { Kunde } from "../../../generated/prisma"
+import type { Kunde, User } from "../../../generated/prisma"
 import { getPower } from "../../api/get/power"
 import type { SolarModule } from "../../interface/module"
 import type { RowClickedEvent } from "ag-grid-community";
@@ -14,9 +14,11 @@ import Toast from "../../helper/Toast"
 
 const ContentArea = (
     {
-        customerData
+        customerData,
+        user
     }: {
         customerData: Kunde | undefined
+        user: User | undefined
     }
 ) => {
     const [open, setOpen] = useState(false)
@@ -33,9 +35,9 @@ const ContentArea = (
 
     useEffect(() => {
         const fetchSolarModules = async () => {
-            if (!customerData) return
+            if (!customerData || !user) return
             setIsLoading(true)
-            const { success, data, error } = await getSolarModules(customerData.Kundennummer)
+            const { success, data, error } = await getSolarModules(customerData.Kundennummer, user)
             setIsLoading(false)
             if (!success) {
                 const errorMessage = `Failed to fetch solar modules: ${error}`;
@@ -45,16 +47,16 @@ const ContentArea = (
             }
         }
         fetchSolarModules()
-    }, [customerData])
+    }, [customerData, user])
 
     useEffect(() => {
 
         const fetchPowerOutput = async () => {
-            if (!selectedModule) {
+            if (!selectedModule || !user) {
                 setPowerOutput(undefined)
                 return
             }
-            const { success, data, error } = await getPower(selectedModule.Modulnummer)
+            const { success, data, error } = await getPower(selectedModule.Modulnummer, user)
             if (!success) {
                 const errorMessage = `Failed to fetch power output: ${error}`;
                 toaster.push(<Toast message={errorMessage} />, { placement: "topCenter" });
@@ -68,7 +70,7 @@ const ContentArea = (
         }
 
         fetchPowerOutput()
-    }, [selectedModule])
+    }, [selectedModule, user])
 
     return (
         <div className="flex-row content-area margin-bottom-large border-radius">
