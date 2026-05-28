@@ -17,6 +17,7 @@ namespace WinFormsDotNet8_Vorlage
         {
             InitializeComponent();
         }
+        //TODO add a create Button
 
         private void btnGetData_Click(object sender, EventArgs e)
         {
@@ -34,6 +35,16 @@ namespace WinFormsDotNet8_Vorlage
         }
 
         protected virtual void showDetail(DataGridViewCellMouseEventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            addEntry();
+        }
+
+        protected virtual void addEntry()
         {
 
         }

@@ -38,12 +38,7 @@ namespace WinFormsDotNet8_Vorlage
 
         private void LoadForms()
         {
-            _customerDetailView.Show(mainDockPanel, DockState.Document);
-            _solarDetailView.Show(mainDockPanel, DockState.Document);
-            _solarTable.Show(mainDockPanel, DockState.Document);
-            _customerTable.Show(mainDockPanel, DockState.Document);
-
-            _logIn.Activate();
+            _logIn.Show();
         }
 
         private void LoadSidebar()

@@ -115,9 +115,8 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "LogIn";
             ShowIcon = false;
-            ShowInTaskbar = false;
             Text = "LogIn";
-            WindowState = FormWindowState.Maximized;
+            //WindowState = FormWindowState.Maximized;
             gbLoginBox.ResumeLayout(false);
             gbLoginBox.PerformLayout();
             ResumeLayout(false);

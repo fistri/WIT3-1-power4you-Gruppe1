@@ -278,3 +278,5 @@ E:\VisualStudio\Project\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorl
 E:\VisualStudio\Project\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.BaseTable.resources
 E:\VisualStudio\Project\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.CustomerTable.resources
 E:\VisualStudio\Project\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.SolarTable.resources
+E:\VisualStudio\Project\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.BaseDetail.resources
+E:\VisualStudio\Project\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.SolarDetailView.resources

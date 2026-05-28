@@ -30,6 +30,7 @@
         {
             btnGetData = new Button();
             dGData = new DataGridView();
+            btnAdd = new Button();
             ((System.ComponentModel.ISupportInitialize)dGData).BeginInit();
             SuspendLayout();
             // 
@@ -55,12 +56,23 @@
             dGData.TabIndex = 4;
             dGData.CellMouseDoubleClick += dGData_CellMouseDoubleClick;
             // 
+            // btnAdd
+            // 
+            btnAdd.Location = new Point(160, 227);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(129, 23);
+            btnAdd.TabIndex = 6;
+            btnAdd.Text = "Add entry";
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
+            // 
             // BaseTable
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(45, 45, 48);
             ClientSize = new Size(800, 450);
+            Controls.Add(btnAdd);
             Controls.Add(btnGetData);
             Controls.Add(dGData);
             FormBorderStyle = FormBorderStyle.None;
@@ -74,5 +86,6 @@
 
         public Button btnGetData;
         public DataGridView dGData;
+        public Button btnAdd;
     }
 }

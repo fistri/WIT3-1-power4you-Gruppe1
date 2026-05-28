@@ -72,7 +72,7 @@ namespace WinFormsDotNet8_Vorlage
                         solarTyp.Pmpp = reader.GetFloat("Pmpp");
                     }
                 }
-                SolarTypeDetailView detail = new SolarTypeDetailView(solarTyp);
+                SolarDetailView detail = new SolarDetailView(solarTyp, true);
                 detail.Show();
             }
         }

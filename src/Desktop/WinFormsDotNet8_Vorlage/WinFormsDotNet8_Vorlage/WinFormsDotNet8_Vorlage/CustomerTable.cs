@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinFormsDotNet8_Vorlage.Models;
+using WinFormsDotNet8_Vorlage.Models.DTOs;
 
 namespace WinFormsDotNet8_Vorlage
 {
@@ -54,22 +55,22 @@ namespace WinFormsDotNet8_Vorlage
             {
                 DataGridViewRow row = dGData.Rows[e.RowIndex];
 
-                int id = Convert.ToInt32(row.Cells["Solarmodultypnummer"].Value);
-                Kunde kunde = new Kunde();
+                int id = Convert.ToInt32(row.Cells["Kundennummer"].Value);
+                KundeDTO kunde = new KundeDTO();
 
                 using (MySqlConnection connection = new MySqlConnection(sConnection))
                 {
                     connection.Open();
 
-                    string sQuery = $"SELECT * FROM Kunde WHERE Solarmodultypnummer = {id}";
+                    string sQuery = $"SELECT * FROM Kunde WHERE Kundennummer = {id}";
 
                     MySqlCommand command = new MySqlCommand(sQuery, connection);
                     MySqlDataReader reader = command.ExecuteReader();
 
                     if (reader.Read())
                     {
-                        kunde.Kundennummer = reader.GetInt32("Kundennummer");
-                        kunde.User_ID = reader.GetInt32("User_ID");
+                        //kunde.Kundennummer = reader.GetInt32("Kundennummer");
+                        //kunde.User_ID = reader.GetInt32("User_ID");
                         kunde.Vorname = reader.GetString("Vorname");
                         kunde.Nachname = reader.GetString("Nachname");
                         kunde.Strasse = reader.GetString("Strasse");
@@ -80,9 +81,30 @@ namespace WinFormsDotNet8_Vorlage
                         kunde.Telefonnummer = reader.GetString("Telefonnummer");
                     }
                 }
-                // SolarTypeDetailView detail = new SolarTypeDetailView(kunde);
-                // detail.Show();
+                CustomerDetailView detail = new CustomerDetailView(kunde,true);
+                 detail.Show();
             }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            addEntry();
+        }
+
+        protected override void addEntry()
+        {
+            KundeDTO kunde = new KundeDTO();
+           // kunde.Kundennummer = 0;
+           // kunde.User_ID = 0;
+            kunde.Vorname = "";
+            kunde.Nachname = "";
+            kunde.Strasse = "";
+            kunde.Hausnummer = "";
+            kunde.Postleitzahl = "";
+            kunde.Ort = "";
+            kunde.Email = "";
+            kunde.Telefonnummer = "";
+            CustomerDetailView detail = new CustomerDetailView(kunde,false);
         }
     }
 }
