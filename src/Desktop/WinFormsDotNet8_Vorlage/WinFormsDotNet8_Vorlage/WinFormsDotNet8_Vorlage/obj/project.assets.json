@@ -2299,19 +2299,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Faihok\\.nuget\\packages\\": {}
+    "C:\\Users\\jonas\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\VisualStudio\\Project\\src\\Desktop\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage.csproj",
+      "projectUniqueName": "F:\\Dev\\WIT3-1-power4you-Gruppe1\\src\\Desktop\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage.csproj",
       "projectName": "WinFormsDotNet8_Vorlage",
-      "projectPath": "E:\\VisualStudio\\Project\\src\\Desktop\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage.csproj",
-      "packagesPath": "C:\\Users\\Faihok\\.nuget\\packages\\",
-      "outputPath": "E:\\VisualStudio\\Project\\src\\Desktop\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\obj\\",
+      "projectPath": "F:\\Dev\\WIT3-1-power4you-Gruppe1\\src\\Desktop\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage.csproj",
+      "packagesPath": "C:\\Users\\jonas\\.nuget\\packages\\",
+      "outputPath": "F:\\Dev\\WIT3-1-power4you-Gruppe1\\src\\Desktop\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\WinFormsDotNet8_Vorlage\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Faihok\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jonas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2319,6 +2324,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

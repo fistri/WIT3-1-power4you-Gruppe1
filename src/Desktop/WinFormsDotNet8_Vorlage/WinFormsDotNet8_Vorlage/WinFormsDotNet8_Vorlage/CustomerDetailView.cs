@@ -18,7 +18,8 @@ namespace WinFormsDotNet8_Vorlage
 {
     public partial class CustomerDetailView : BaseDetail<KundeDTO>
     {
-        string sConnection = @"Server=w012ac34.kasserver.com;Uid=d03a150f;Pwd=Tp678CWc859CX4Xg;Database=d03a150f;";
+        private readonly int _loggedInUserId;
+        private readonly string _sConnection = @"Server=w012ac34.kasserver.com;Uid=d03a150f;Pwd=Tp678CWc859CX4Xg;Database=d03a150f;";
 
         public CustomerDetailView()
         {
@@ -31,7 +32,7 @@ namespace WinFormsDotNet8_Vorlage
 
         protected override void SaveToDatabase(KundeDTO dataset, bool isEdit)
         {
-            using (MySqlConnection connection = new MySqlConnection(sConnection))
+            using (MySqlConnection connection = new MySqlConnection(_sConnection))
             {
                 string sQuery = "SELECT * FROM Kunde";
                 connection.Open();
@@ -59,7 +60,6 @@ namespace WinFormsDotNet8_Vorlage
 
                 using var cmd = new MySqlCommand(sQuery, connection);
 
-                //cmd.Parameters.Add("@Kundennummer", MySqlDbType.Int32).Value = dataset.Kundennummer;
                 //cmd.Parameters.Add("@User_ID", MySqlDbType.Int32).Value = dataset.User_ID;
                 cmd.Parameters.Add("@Vorname", MySqlDbType.String).Value = dataset.Vorname;
                 cmd.Parameters.Add("@Nachname", MySqlDbType.String).Value = dataset.Nachname;

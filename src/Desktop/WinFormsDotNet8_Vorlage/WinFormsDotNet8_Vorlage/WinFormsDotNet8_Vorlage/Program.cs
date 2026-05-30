@@ -11,19 +11,14 @@ internal static class Program
 
         // Services registrieren
         builder.Services.AddSingleton<MainForm>(); // Singleton MainForm
-        builder.Services.AddTransient<LogIn>();    // Login jedes Mal neu
 
         var app = builder.Build();
 
         ApplicationConfiguration.Initialize();
 
-        // Login anzeigen
-        var login = app.Services.GetRequiredService<LogIn>();
 
-        if (login.ShowDialog() == DialogResult.OK)
-        {
-            var mainForm = app.Services.GetRequiredService<MainForm>();
-            Application.Run(mainForm);
-        }
+        var mainForm = app.Services.GetRequiredService<MainForm>();
+        Application.Run(mainForm);
+
     }
 }

@@ -17,7 +17,6 @@ namespace WinFormsDotNet8_Vorlage
         {
             InitializeComponent();
         }
-        //TODO add a create Button
 
         private void btnGetData_Click(object sender, EventArgs e)
         {
@@ -47,6 +46,19 @@ namespace WinFormsDotNet8_Vorlage
         protected virtual void addEntry()
         {
 
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                e.Cancel = true;
+                this.Hide();
+            }
+            else
+            {
+                base.OnFormClosing(e);
+            }
         }
     }
 }

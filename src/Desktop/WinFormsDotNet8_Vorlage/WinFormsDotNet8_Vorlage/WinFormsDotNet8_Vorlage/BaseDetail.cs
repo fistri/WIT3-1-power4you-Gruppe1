@@ -28,7 +28,7 @@ namespace WinFormsDotNet8_Vorlage
             ForeColor = Color.White;
             ShowIcon = false;
             ShowInTaskbar = false;
-           this.ClientSize = new System.Drawing.Size(800, 450);
+           this.ClientSize = new Size(800, 450);
             FormBorderStyle = FormBorderStyle.Sizable;
             ControlBox = false;
 
@@ -104,8 +104,6 @@ namespace WinFormsDotNet8_Vorlage
             btnCancel.Click += btnCancel_Click;
 
             Controls.Add(btnCancel);
-
-            //TODO ADD DELETE BUTTON
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
