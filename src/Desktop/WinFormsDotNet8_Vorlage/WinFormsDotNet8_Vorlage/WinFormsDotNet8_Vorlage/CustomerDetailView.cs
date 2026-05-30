@@ -1,16 +1,7 @@
-﻿using Google.Protobuf.Compiler;
-using MySql.Data.MySqlClient;
-using Mysqlx.Crud;
+﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 using WinFormsDotNet8_Vorlage.Models;
 
 namespace WinFormsDotNet8_Vorlage
@@ -32,18 +23,14 @@ namespace WinFormsDotNet8_Vorlage
                 return new Dictionary<int, string>();
 
             var result = new Dictionary<int, string>();
-
             using (var connection = new MySqlConnection(_sConnection))
             {
                 connection.Open();
                 var cmd = new MySqlCommand("SELECT User_ID, Username FROM User", connection);
                 using var reader = cmd.ExecuteReader();
                 while (reader.Read())
-                {
                     result[reader.GetInt32("User_ID")] = reader.GetString("Username");
-                }
             }
-
             return result;
         }
 
@@ -57,22 +44,24 @@ namespace WinFormsDotNet8_Vorlage
                 if (isEdit)
                 {
                     sQuery = @"UPDATE Kunde SET
-                    Vorname=@Vorname, Nachname=@Nachname, Strasse=@Strasse,
-                    Hausnummer=@Hausnummer, Postleitzahl=@Postleitzahl,
-                    Ort=@Ort, Email=@Email, Telefonnummer=@Telefonnummer
-                    WHERE Kundennummer=@Kundennummer";
+                        User_ID=@User_ID,
+                        Vorname=@Vorname, Nachname=@Nachname, Strasse=@Strasse,
+                        Hausnummer=@Hausnummer, Postleitzahl=@Postleitzahl,
+                        Ort=@Ort, Email=@Email, Telefonnummer=@Telefonnummer
+                        WHERE Kundennummer=@Kundennummer";
                 }
                 else
                 {
                     sQuery = @"INSERT INTO Kunde
-                    (User_ID, Vorname, Nachname, Strasse, Hausnummer, Postleitzahl, Ort, Email, Telefonnummer)
-                    VALUES
-                    (@User_ID, @Vorname, @Nachname, @Strasse, @Hausnummer, @Postleitzahl, @Ort, @Email, @Telefonnummer)";
+                        (User_ID, Vorname, Nachname, Strasse, Hausnummer, Postleitzahl, Ort, Email, Telefonnummer)
+                        VALUES
+                        (@User_ID, @Vorname, @Nachname, @Strasse, @Hausnummer, @Postleitzahl, @Ort, @Email, @Telefonnummer)";
                 }
 
                 using var cmd = new MySqlCommand(sQuery, connection);
 
-                if (isEdit) cmd.Parameters.AddWithValue("@Kundennummer", dataset.Kundennummer);
+                if (isEdit)
+                    cmd.Parameters.AddWithValue("@Kundennummer", dataset.Kundennummer);
 
                 cmd.Parameters.AddWithValue("@User_ID", dataset.User_ID);
                 cmd.Parameters.AddWithValue("@Vorname", dataset.Vorname);
@@ -96,24 +85,34 @@ namespace WinFormsDotNet8_Vorlage
         {
             var confirm = MessageBox.Show(
                 $"Do you really want to delete Customer '{dataset.Vorname} {dataset.Nachname}'?\n" +
-                "All corresponding solar modules will be deleted!",
-                "Accept", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                "All corresponding solar modules and their performance data will also be deleted!",
+                "Confirm deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (confirm != DialogResult.Yes) return;
 
             using (var connection = new MySqlConnection(_sConnection))
             {
                 connection.Open();
-
                 using var transaction = connection.BeginTransaction();
                 try
                 {
+                    // Delete power data of the customer's solar modules
+                    var cmdLeistung = new MySqlCommand(@"
+                        DELETE l FROM Leistung l
+                        INNER JOIN Solarmodul s ON l.Modulnummer = s.Modulnummer
+                        WHERE s.Kundennummer = @Kundennummer",
+                        connection, transaction);
+                    cmdLeistung.Parameters.AddWithValue("@Kundennummer", dataset.Kundennummer);
+                    cmdLeistung.ExecuteNonQuery();
+
+                    // Delete solar modules of the customer
                     var cmdSolar = new MySqlCommand(
                         "DELETE FROM Solarmodul WHERE Kundennummer = @Kundennummer",
                         connection, transaction);
                     cmdSolar.Parameters.AddWithValue("@Kundennummer", dataset.Kundennummer);
                     cmdSolar.ExecuteNonQuery();
 
+                    // Delete the customer
                     var cmdKunde = new MySqlCommand(
                         "DELETE FROM Kunde WHERE Kundennummer = @Kundennummer",
                         connection, transaction);
@@ -121,7 +120,7 @@ namespace WinFormsDotNet8_Vorlage
                     cmdKunde.ExecuteNonQuery();
 
                     transaction.Commit();
-                    MessageBox.Show("Kunde und zugehörige Solarmodule gelöscht.");
+                    MessageBox.Show("Customer and all corresponding data deleted successfully.");
                 }
                 catch (Exception ex)
                 {
