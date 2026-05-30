@@ -20,8 +20,6 @@ namespace WinFormsDotNet8_Vorlage
         private CustomerTable _customerTable;
         private SolarTable _solarTable;
 
-        public User? CurrentUser { get; private set; }
-
         public MainForm()
         {
             InitializeComponent();
@@ -55,7 +53,6 @@ namespace WinFormsDotNet8_Vorlage
                 if (result != DialogResult.OK || logIn.LoggedInUser == null)
                     return false;
 
-                CurrentUser = logIn.LoggedInUser;
                 return true;
             }
         }

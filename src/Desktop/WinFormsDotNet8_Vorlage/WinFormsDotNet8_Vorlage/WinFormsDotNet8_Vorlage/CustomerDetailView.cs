@@ -12,73 +12,127 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using WinFormsDotNet8_Vorlage.Models;
-using WinFormsDotNet8_Vorlage.Models.DTOs;
 
 namespace WinFormsDotNet8_Vorlage
 {
-    public partial class CustomerDetailView : BaseDetail<KundeDTO>
+    public partial class CustomerDetailView : BaseDetail<Kunde>
     {
-        private readonly int _loggedInUserId;
-        private readonly string _sConnection = @"Server=w012ac34.kasserver.com;Uid=d03a150f;Pwd=Tp678CWc859CX4Xg;Database=d03a150f;";
+        private readonly string _sConnection = @"Server=w012ac34.kasserver.com;Uid=d03a150f;Pwd=Tp678CWc859CX4Xg;Database=d03a150f";
 
-        public CustomerDetailView()
-        {
-            InitializeComponent();
-        }
-        public CustomerDetailView(KundeDTO kunde, bool isEdit) : this()
+        public CustomerDetailView() { InitializeComponent(); }
+
+        public CustomerDetailView(Kunde kunde, bool isEdit) : this()
         {
             LoadDataset(kunde, isEdit);
         }
 
-        protected override void SaveToDatabase(KundeDTO dataset, bool isEdit)
+        protected override Dictionary<int, string> GetDropdownOptionsFor(string propertyName)
         {
-            using (MySqlConnection connection = new MySqlConnection(_sConnection))
+            if (propertyName != "User_ID")
+                return new Dictionary<int, string>();
+
+            var result = new Dictionary<int, string>();
+
+            using (var connection = new MySqlConnection(_sConnection))
             {
-                string sQuery = "SELECT * FROM Kunde";
                 connection.Open();
+                var cmd = new MySqlCommand("SELECT User_ID, Username FROM User", connection);
+                using var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    result[reader.GetInt32("User_ID")] = reader.GetString("Username");
+                }
+            }
+
+            return result;
+        }
+
+        protected override void SaveToDatabase(Kunde dataset, bool isEdit)
+        {
+            using (var connection = new MySqlConnection(_sConnection))
+            {
+                connection.Open();
+                string sQuery;
+
                 if (isEdit)
                 {
-                    sQuery = @"
-                UPDATE Kunde
-                SET Kundennummer = @Kundennummer,
-                    User_ID = @User_ID,
-                    Vorname = @Vorname,
-                    Nachname = @Nachname,
-                    Strasse = @Strasse,
-                    Hausnummer = @Hausnummer,
-                    Postleitzahl = @Postleitzahl,
-                    Ort = @Ort,
-                    Email = @Email,
-                    Telefonnummer = @Telefonnummer
-                WHERE Kundennummer = @Kundennummer";
-
+                    sQuery = @"UPDATE Kunde SET
+                    Vorname=@Vorname, Nachname=@Nachname, Strasse=@Strasse,
+                    Hausnummer=@Hausnummer, Postleitzahl=@Postleitzahl,
+                    Ort=@Ort, Email=@Email, Telefonnummer=@Telefonnummer
+                    WHERE Kundennummer=@Kundennummer";
                 }
                 else
                 {
-                    sQuery = "SELECT * FROM Kunde";
+                    sQuery = @"INSERT INTO Kunde
+                    (User_ID, Vorname, Nachname, Strasse, Hausnummer, Postleitzahl, Ort, Email, Telefonnummer)
+                    VALUES
+                    (@User_ID, @Vorname, @Nachname, @Strasse, @Hausnummer, @Postleitzahl, @Ort, @Email, @Telefonnummer)";
                 }
 
                 using var cmd = new MySqlCommand(sQuery, connection);
 
-                //cmd.Parameters.Add("@User_ID", MySqlDbType.Int32).Value = dataset.User_ID;
-                cmd.Parameters.Add("@Vorname", MySqlDbType.String).Value = dataset.Vorname;
-                cmd.Parameters.Add("@Nachname", MySqlDbType.String).Value = dataset.Nachname;
-                cmd.Parameters.Add("@Strasse", MySqlDbType.String).Value = dataset.Strasse;
-                cmd.Parameters.Add("@Hausnummer", MySqlDbType.String).Value = dataset.Hausnummer;
-                cmd.Parameters.Add("@Postleitzahl", MySqlDbType.String).Value = dataset.Postleitzahl;
-                cmd.Parameters.Add("@Ort", MySqlDbType.String).Value = dataset.Ort;
-                cmd.Parameters.Add("@Email", MySqlDbType.String).Value = dataset.Email;
-                cmd.Parameters.Add("@Telefonnummer", MySqlDbType.String).Value = dataset.Telefonnummer;
-                if(cmd.ExecuteNonQuery() == 1)
-                {
+                if (isEdit) cmd.Parameters.AddWithValue("@Kundennummer", dataset.Kundennummer);
+
+                cmd.Parameters.AddWithValue("@User_ID", dataset.User_ID);
+                cmd.Parameters.AddWithValue("@Vorname", dataset.Vorname);
+                cmd.Parameters.AddWithValue("@Nachname", dataset.Nachname);
+                cmd.Parameters.AddWithValue("@Strasse", dataset.Strasse);
+                cmd.Parameters.AddWithValue("@Hausnummer", dataset.Hausnummer);
+                cmd.Parameters.AddWithValue("@Postleitzahl", dataset.Postleitzahl);
+                cmd.Parameters.AddWithValue("@Ort", dataset.Ort);
+                cmd.Parameters.AddWithValue("@Email", dataset.Email);
+                cmd.Parameters.AddWithValue("@Telefonnummer", dataset.Telefonnummer);
+
+                if (cmd.ExecuteNonQuery() == 1)
                     MessageBox.Show("Saved successfully");
-                } else
-                {
+                else
                     MessageBox.Show("Error while saving");
+            }
+            this.Hide();
+        }
+
+        protected override void DeleteDataset()
+        {
+            var confirm = MessageBox.Show(
+                $"Do you really want to delete Customer '{dataset.Vorname} {dataset.Nachname}'?\n" +
+                "All corresponding solar modules will be deleted!",
+                "Accept", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (confirm != DialogResult.Yes) return;
+
+            using (var connection = new MySqlConnection(_sConnection))
+            {
+                connection.Open();
+
+                using var transaction = connection.BeginTransaction();
+                try
+                {
+                    var cmdSolar = new MySqlCommand(
+                        "DELETE FROM Solarmodul WHERE Kundennummer = @Kundennummer",
+                        connection, transaction);
+                    cmdSolar.Parameters.AddWithValue("@Kundennummer", dataset.Kundennummer);
+                    cmdSolar.ExecuteNonQuery();
+
+                    var cmdKunde = new MySqlCommand(
+                        "DELETE FROM Kunde WHERE Kundennummer = @Kundennummer",
+                        connection, transaction);
+                    cmdKunde.Parameters.AddWithValue("@Kundennummer", dataset.Kundennummer);
+                    cmdKunde.ExecuteNonQuery();
+
+                    transaction.Commit();
+                    MessageBox.Show("Kunde und zugehörige Solarmodule gelöscht.");
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    MessageBox.Show($"Error deleting: {ex.Message}", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
             }
-            
-            this.Close();
+
+            this.Hide();
         }
     }
 }

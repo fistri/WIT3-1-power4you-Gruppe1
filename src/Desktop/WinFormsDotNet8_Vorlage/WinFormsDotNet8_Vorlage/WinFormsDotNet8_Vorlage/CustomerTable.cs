@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinFormsDotNet8_Vorlage.Models;
-using WinFormsDotNet8_Vorlage.Models.DTOs;
 
 namespace WinFormsDotNet8_Vorlage
 {
@@ -51,39 +50,35 @@ namespace WinFormsDotNet8_Vorlage
 
         protected override void showDetail(DataGridViewCellMouseEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (e.RowIndex < 0) return;
+
+            DataGridViewRow row = dGData.Rows[e.RowIndex];
+            int id = Convert.ToInt32(row.Cells["Kundennummer"].Value);
+            Kunde kunde = new Kunde();
+
+            using (var connection = new MySqlConnection(sConnection))
             {
-                DataGridViewRow row = dGData.Rows[e.RowIndex];
+                connection.Open();
+                var cmd = new MySqlCommand($"SELECT * FROM Kunde WHERE Kundennummer = {id}", connection);
+                var reader = cmd.ExecuteReader();
 
-                int id = Convert.ToInt32(row.Cells["Kundennummer"].Value);
-                KundeDTO kunde = new KundeDTO();
-
-                using (MySqlConnection connection = new MySqlConnection(sConnection))
+                if (reader.Read())
                 {
-                    connection.Open();
-
-                    string sQuery = $"SELECT * FROM Kunde WHERE Kundennummer = {id}";
-
-                    MySqlCommand command = new MySqlCommand(sQuery, connection);
-                    MySqlDataReader reader = command.ExecuteReader();
-
-                    if (reader.Read())
-                    {
-                        //kunde.Kundennummer = reader.GetInt32("Kundennummer");
-                        //kunde.User_ID = reader.GetInt32("User_ID");
-                        kunde.Vorname = reader.GetString("Vorname");
-                        kunde.Nachname = reader.GetString("Nachname");
-                        kunde.Strasse = reader.GetString("Strasse");
-                        kunde.Hausnummer = reader.GetString("Hausnummer");
-                        kunde.Postleitzahl = reader.GetString("Postleitzahl");
-                        kunde.Ort = reader.GetString("Ort");
-                        kunde.Email = reader.GetString("Email");
-                        kunde.Telefonnummer = reader.GetString("Telefonnummer");
-                    }
+                    kunde.Kundennummer = reader.GetInt32("Kundennummer");
+                    kunde.User_ID = reader.GetInt32("User_ID");
+                    kunde.Vorname = reader.GetString("Vorname");
+                    kunde.Nachname = reader.GetString("Nachname");
+                    kunde.Strasse = reader.GetString("Strasse");
+                    kunde.Hausnummer = reader.GetString("Hausnummer");
+                    kunde.Postleitzahl = reader.GetString("Postleitzahl");
+                    kunde.Ort = reader.GetString("Ort");
+                    kunde.Email = reader.GetString("Email");
+                    kunde.Telefonnummer = reader.GetString("Telefonnummer");
                 }
-                CustomerDetailView detail = new CustomerDetailView(kunde,true);
-                 detail.Show();
             }
+
+            var detail = new CustomerDetailView(kunde, true);
+            detail.Show();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -93,18 +88,9 @@ namespace WinFormsDotNet8_Vorlage
 
         protected override void addEntry()
         {
-            KundeDTO kunde = new KundeDTO();
-           // kunde.Kundennummer = 0;
-           // kunde.User_ID = 0;
-            kunde.Vorname = "";
-            kunde.Nachname = "";
-            kunde.Strasse = "";
-            kunde.Hausnummer = "";
-            kunde.Postleitzahl = "";
-            kunde.Ort = "";
-            kunde.Email = "";
-            kunde.Telefonnummer = "";
-            CustomerDetailView detail = new CustomerDetailView(kunde,false);
+            var kunde = new Kunde();
+            var detail = new CustomerDetailView(kunde, false);
+            detail.Show();
         }
     }
 }
