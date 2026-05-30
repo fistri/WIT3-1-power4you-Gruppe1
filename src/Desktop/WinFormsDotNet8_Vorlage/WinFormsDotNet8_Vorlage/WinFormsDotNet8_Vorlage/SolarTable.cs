@@ -47,34 +47,44 @@ namespace WinFormsDotNet8_Vorlage
         }
         protected override void showDetail(DataGridViewCellMouseEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (e.RowIndex < 0) return;
+
+            DataGridViewRow row = base.dGData.Rows[e.RowIndex];
+            int id = Convert.ToInt32(row.Cells["Solarmodultypnummer"].Value);
+            Solarmodultyp solarTyp = new Solarmodultyp();
+
+            using (MySqlConnection connection = new MySqlConnection(sConnection))
             {
-                DataGridViewRow row = base.dGData.Rows[e.RowIndex];
+                connection.Open();
+                string sQuery = $"SELECT * FROM Solarmodultyp WHERE Solarmodultypnummer = {id}";
 
-                int id = Convert.ToInt32(row.Cells["Solarmodultypnummer"].Value);
-                Solarmodultyp solarTyp = new Solarmodultyp();
+                MySqlCommand command = new MySqlCommand(sQuery, connection);
+                MySqlDataReader reader = command.ExecuteReader();
 
-                using (MySqlConnection connection = new MySqlConnection(sConnection))
+                if (reader.Read())
                 {
-                    connection.Open();
-
-                    string sQuery = $"SELECT * FROM Solarmodultyp WHERE Solarmodultypnummer = {id}";
-
-                    MySqlCommand command = new MySqlCommand(sQuery, connection);
-                    MySqlDataReader reader = command.ExecuteReader();
-
-                    if (reader.Read())
-                    {
-                        solarTyp.Solarmodultypnummer = reader.GetInt32("Solarmodultypnummer");
-                        solarTyp.Bezeichnung = reader.GetString("Bezeichnung");
-                        solarTyp.Umpp = reader.GetFloat("Umpp");
-                        solarTyp.Impp = reader.GetFloat("Impp");
-                        solarTyp.Pmpp = reader.GetFloat("Pmpp");
-                    }
+                    solarTyp.Solarmodultypnummer = reader.GetInt32("Solarmodultypnummer");
+                    solarTyp.Bezeichnung = reader.GetString("Bezeichnung");
+                    solarTyp.Umpp = reader.GetFloat("Umpp");
+                    solarTyp.Impp = reader.GetFloat("Impp");
+                    solarTyp.Pmpp = reader.GetFloat("Pmpp");
                 }
-                SolarDetailView detail = new SolarDetailView(solarTyp, true);
-                detail.Show();
             }
+            var detail = new SolarDetailView(solarTyp, true);
+            detail.Show();
+            
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            addEntry();
+        }
+
+        protected override void addEntry()
+        {
+            var solarTyp = new Solarmodultyp();
+            var detail = new SolarDetailView(solarTyp, false);
+            detail.Show();
         }
     }
 }

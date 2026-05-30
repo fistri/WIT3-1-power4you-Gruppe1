@@ -12,9 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\jonas\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\jonas\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      "C:\\Users\\Fischak\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Fischak\\.nuget\\packages"
     ],
     "configProperties": {
       "CSWINRT_USE_WINDOWS_UI_XAML_PROJECTIONS": false,

@@ -78,7 +78,7 @@ namespace WinFormsDotNet8_Vorlage
                 else
                     MessageBox.Show("Error while saving");
             }
-            this.Hide();
+            this.Dispose();
         }
 
         protected override void DeleteDataset()
@@ -131,7 +131,9 @@ namespace WinFormsDotNet8_Vorlage
                 }
             }
 
-            this.Hide();
+            this.Dispose();
         }
+
+        //TODO: Implement only SolarModul Deletion? Beacause of the case that a Cusatomer is not useing his solar module anymore.
     }
 }

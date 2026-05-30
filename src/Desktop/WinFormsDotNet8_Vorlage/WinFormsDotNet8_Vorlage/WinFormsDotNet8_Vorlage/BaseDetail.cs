@@ -30,7 +30,7 @@ namespace WinFormsDotNet8_Vorlage
             ForeColor = Color.White;
             ShowIcon = false;
             ShowInTaskbar = false;
-           this.ClientSize = new Size(800, 450);
+            this.ClientSize = new Size(800, 450);
             FormBorderStyle = FormBorderStyle.Sizable;
             ControlBox = false;
 
@@ -227,7 +227,8 @@ namespace WinFormsDotNet8_Vorlage
             {
                 var prop = field.Key;
                 var textBox = field.Value;
-                var originalValue = prop.GetValue(dataset).ToString();
+                var originalValue = prop.GetValue(dataset)?.ToString() ?? "";
+
                 if (!originalValue.Equals(textBox.Text))
                 {
                     return true;
