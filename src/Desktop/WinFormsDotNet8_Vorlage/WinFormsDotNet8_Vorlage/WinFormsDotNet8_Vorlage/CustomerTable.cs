@@ -78,6 +78,7 @@ namespace WinFormsDotNet8_Vorlage
             }
 
             var detail = new CustomerDetailView(kunde, true);
+            detail.DataChanged += (s, args) => getData();
             detail.Show();
         }
 
@@ -90,6 +91,7 @@ namespace WinFormsDotNet8_Vorlage
         {
             var kunde = new Kunde();
             var detail = new CustomerDetailView(kunde, false);
+            detail.DataChanged += (s, args) => getData();
             detail.Show();
         }
     }

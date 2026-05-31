@@ -71,6 +71,7 @@ namespace WinFormsDotNet8_Vorlage
                 }
             }
             var detail = new SolarDetailView(solarTyp, true);
+            detail.DataChanged += (s, args) => getData();
             detail.Show();
             
         }
@@ -84,6 +85,7 @@ namespace WinFormsDotNet8_Vorlage
         {
             var solarTyp = new Solarmodultyp();
             var detail = new SolarDetailView(solarTyp, false);
+            detail.DataChanged += (s, args) => getData();
             detail.Show();
         }
     }

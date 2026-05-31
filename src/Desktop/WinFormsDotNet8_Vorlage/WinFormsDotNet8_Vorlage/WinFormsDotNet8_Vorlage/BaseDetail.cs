@@ -36,6 +36,13 @@ namespace WinFormsDotNet8_Vorlage
 
         }
 
+        public event EventHandler DataChanged;
+
+        protected void OnDataChanged()
+        {
+            DataChanged?.Invoke(this, EventArgs.Empty);
+        }
+
         protected void LoadDataset(TModel data, bool edit)
         {
             dataset = data;
@@ -58,7 +65,7 @@ namespace WinFormsDotNet8_Vorlage
 
             foreach (var prop in properties)
             {
-                if (prop.Name == "Kundennummer") continue;
+                if (prop.Name == "Kundennummer" || prop.Name == "Solarmodultypnummer") continue;
 
                 Label lbl = new Label();
                 lbl.Text = prop.Name;
@@ -86,7 +93,7 @@ namespace WinFormsDotNet8_Vorlage
                     foreach (var kv in options)
                         cmb.Items.Add(new DropdownItem(kv.Key, kv.Value));
 
-                    // Vorauswahl beim Bearbeiten
+                    // Preselection while editing
                     var currentValue = prop.GetValue(dataset);
                     int currentId = currentValue != null ? Convert.ToInt32(currentValue) : 0;
 
@@ -191,11 +198,13 @@ namespace WinFormsDotNet8_Vorlage
             }
 
             SaveToDatabase(dataset, isEdit);
+            OnDataChanged();
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
             DeleteDataset();
+            OnDataChanged();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
