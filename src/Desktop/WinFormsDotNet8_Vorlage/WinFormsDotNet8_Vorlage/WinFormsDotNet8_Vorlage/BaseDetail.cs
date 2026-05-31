@@ -19,8 +19,8 @@ namespace WinFormsDotNet8_Vorlage
         protected bool isEdit = true;
         private bool _forceClose = false;
 
-        private readonly Dictionary<PropertyInfo, TextBox> _fields 
-            = new Dictionary<PropertyInfo, TextBox>();
+        private readonly Dictionary<PropertyInfo, Control> _fields 
+            = new Dictionary<PropertyInfo, Control>();
         private readonly Dictionary<PropertyInfo, ComboBox> _dropdowns
             = new Dictionary<PropertyInfo, ComboBox>();
 
@@ -114,6 +114,17 @@ namespace WinFormsDotNet8_Vorlage
                     Controls.Add(cmb);
                     _dropdowns.Add(prop, cmb);
                 }
+                else if (prop.PropertyType == typeof(float) || prop.PropertyType == typeof(double))
+                {
+                    // Float TextBox
+                    FloatTextBox floatBox = new FloatTextBox();
+                    floatBox.Left = 150;
+                    floatBox.Top = top;
+                    floatBox.Width = 200;
+                    floatBox.FloatValue = Convert.ToSingle(prop.GetValue(dataset) ?? 0f);
+                    Controls.Add(floatBox);
+                    _fields.Add(prop, floatBox);
+                }
                 else
                 {
                     // Normal Textbox
@@ -165,8 +176,8 @@ namespace WinFormsDotNet8_Vorlage
 
                 if (cmb.SelectedItem == null || ((DropdownItem)cmb.SelectedItem).Id == 0)
                 {
-                    MessageBox.Show($"Bitte wählen Sie einen Wert für '{prop.Name}' aus.",
-                        "Pflichtfeld", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show($"Please select a value for the field '{prop.Name}'.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -176,23 +187,27 @@ namespace WinFormsDotNet8_Vorlage
             foreach (var field in _fields)
             {
                 var prop = field.Key;
-                var textBox = field.Value;
+                var control = field.Value;
 
-                if (string.IsNullOrWhiteSpace(textBox.Text))
+                string rawText = control.Text;
+
+                if (string.IsNullOrWhiteSpace(rawText))
                 {
-                    MessageBox.Show($"Das Feld '{prop.Name}' darf nicht leer sein.",
-                        "Pflichtfeld", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show($"The field '{prop.Name}' may not stay empty.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
                 try
                 {
-                    var converted = Convert.ChangeType(textBox.Text, prop.PropertyType);
+                    var converted = Convert.ChangeType(rawText,
+                        prop.PropertyType,
+                        System.Globalization.CultureInfo.CurrentCulture);
                     prop.SetValue(dataset, converted);
                 }
                 catch
                 {
-                    MessageBox.Show($"Ungültiger Wert für {prop.Name}");
+                    MessageBox.Show($"Wrong value {prop.Name}");
                     return;
                 }
             }

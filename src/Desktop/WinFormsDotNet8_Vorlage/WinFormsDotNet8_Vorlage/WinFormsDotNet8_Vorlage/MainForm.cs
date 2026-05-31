@@ -15,8 +15,6 @@ namespace WinFormsDotNet8_Vorlage
     public partial class MainForm : DockContent
     {
         private SideBar _sideBar;
-        private CustomerDetailView _customerDetailView;
-        private SolarTypeDetailView _solarDetailView;
         private CustomerTable _customerTable;
         private SolarTable _solarTable;
 
@@ -37,8 +35,6 @@ namespace WinFormsDotNet8_Vorlage
             }
 
             _sideBar = new SideBar(this);
-            _customerDetailView = new CustomerDetailView();
-            _solarDetailView = new SolarTypeDetailView();
             _solarTable = new SolarTable();
             _customerTable = new CustomerTable();
 
@@ -68,17 +64,14 @@ namespace WinFormsDotNet8_Vorlage
 
             switch (target.ToLower())
             {
-                case "solarmodultyp":
+                case "moduletype":
                     targetForm = _solarTable;
                     break;
-                case "kunden":
+                case "customer":
                     targetForm = _customerTable;
                     break;
-                case "firmen":
-                    // targetForm = _predictionForm;
-                    break;
                 default:
-                    MessageBox.Show($"Unbekanntes Ziel: {target}");
+                    MessageBox.Show($"Unknown target: {target}");
                     break;
             }
 

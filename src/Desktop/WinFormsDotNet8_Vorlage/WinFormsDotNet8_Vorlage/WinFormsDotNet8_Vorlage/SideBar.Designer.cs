@@ -43,7 +43,7 @@
             btnSolarmodultyp.Name = "btnSolarmodultyp";
             btnSolarmodultyp.Size = new Size(250, 23);
             btnSolarmodultyp.TabIndex = 1;
-            btnSolarmodultyp.Text = "Solarmodultyp";
+            btnSolarmodultyp.Text = "Module type";
             btnSolarmodultyp.UseVisualStyleBackColor = false;
             btnSolarmodultyp.Click += btnSolarmodultyp_Click;
             // 
@@ -58,7 +58,7 @@
             btnCustomer.Name = "btnCustomer";
             btnCustomer.Size = new Size(250, 23);
             btnCustomer.TabIndex = 4;
-            btnCustomer.Text = "Kunden";
+            btnCustomer.Text = "Customer";
             btnCustomer.UseVisualStyleBackColor = false;
             btnCustomer.Click += btnCustomer_Click;
             // 

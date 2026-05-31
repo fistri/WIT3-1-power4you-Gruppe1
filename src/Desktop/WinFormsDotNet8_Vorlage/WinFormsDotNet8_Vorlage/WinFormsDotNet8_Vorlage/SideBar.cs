@@ -21,20 +21,14 @@ namespace WinFormsDotNet8_Vorlage
             _mainForm = mainForm;
         }
 
-
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            _mainForm.NavigateTo("home");
-        }
-
         private void btnSolarmodultyp_Click(object sender, EventArgs e)
         {
-            _mainForm.NavigateTo("solarmodultyp");
+            _mainForm.NavigateTo("moduleType");
         }
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
-            _mainForm.NavigateTo("kunden");
+            _mainForm.NavigateTo("customer");
         }
     }
 }

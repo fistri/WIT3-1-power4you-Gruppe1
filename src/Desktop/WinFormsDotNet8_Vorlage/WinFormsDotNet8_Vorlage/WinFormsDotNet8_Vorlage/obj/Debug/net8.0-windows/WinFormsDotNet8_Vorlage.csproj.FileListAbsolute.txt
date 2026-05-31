@@ -346,7 +346,6 @@ F:\Dev\WIT3-1-power4you-Gruppe1\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotN
 F:\Dev\WIT3-1-power4you-Gruppe1\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.SideBar.resources
 F:\Dev\WIT3-1-power4you-Gruppe1\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.SolarDetailView.resources
 F:\Dev\WIT3-1-power4you-Gruppe1\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.SolarTable.resources
-F:\Dev\WIT3-1-power4you-Gruppe1\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.SolarTypeDetailView.resources
 F:\Dev\WIT3-1-power4you-Gruppe1\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.csproj.GenerateResource.cache
 F:\Dev\WIT3-1-power4you-Gruppe1\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.GeneratedMSBuildEditorConfig.editorconfig
 F:\Dev\WIT3-1-power4you-Gruppe1\src\Desktop\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\WinFormsDotNet8_Vorlage\obj\Debug\net8.0-windows\WinFormsDotNet8_Vorlage.AssemblyInfoInputs.cache

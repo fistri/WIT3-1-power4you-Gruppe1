@@ -59,7 +59,7 @@
             tbxPW.Location = new Point(208, 215);
             tbxPW.Name = "tbxPW";
             tbxPW.PasswordChar = '*';
-            tbxPW.PlaceholderText = "Passwort";
+            tbxPW.PlaceholderText = "Password";
             tbxPW.Size = new Size(478, 16);
             tbxPW.TabIndex = 2;
             // 
@@ -79,9 +79,9 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(111, 161);
             label1.Name = "label1";
-            label1.Size = new Size(91, 15);
+            label1.Size = new Size(60, 15);
             label1.TabIndex = 6;
-            label1.Text = "Anmeldename: ";
+            label1.Text = "Username";
             // 
             // label2
             // 
@@ -89,9 +89,9 @@
             label2.ForeColor = Color.White;
             label2.Location = new Point(111, 215);
             label2.Name = "label2";
-            label2.Size = new Size(60, 15);
+            label2.Size = new Size(57, 15);
             label2.TabIndex = 7;
-            label2.Text = "Passwort: ";
+            label2.Text = "Password";
             // 
             // tbxName
             // 
@@ -100,7 +100,7 @@
             tbxName.ForeColor = SystemColors.ButtonFace;
             tbxName.Location = new Point(208, 161);
             tbxName.Name = "tbxName";
-            tbxName.PlaceholderText = "Anmelde Name";
+            tbxName.PlaceholderText = "Username";
             tbxName.Size = new Size(478, 16);
             tbxName.TabIndex = 1;
             // 
@@ -116,7 +116,6 @@
             Name = "LogIn";
             ShowIcon = false;
             Text = "LogIn";
-            //WindowState = FormWindowState.Maximized;
             gbLoginBox.ResumeLayout(false);
             gbLoginBox.PerformLayout();
             ResumeLayout(false);
