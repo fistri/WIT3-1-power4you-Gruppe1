@@ -29,9 +29,6 @@
     <Compile Update="SolarTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SolarTypeDetailView.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="BaseDetail.resx">
